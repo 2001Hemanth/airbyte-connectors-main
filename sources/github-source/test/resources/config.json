@@ -1,0 +1,13 @@
+{
+  "authentication": {
+    "type": "token",
+    "personal_access_token": "ghp_1234567890"
+  },
+  "run_mode": "Custom",
+  "fetch_teams": true,
+  "fetch_pull_request_files": true,
+  "fetch_pull_request_reviews": true,
+  "cutoff_days": 9999,
+  "bucket_id": 1,
+  "bucket_total": 1
+}

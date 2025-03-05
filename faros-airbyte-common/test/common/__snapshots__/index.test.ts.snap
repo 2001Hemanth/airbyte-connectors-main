@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculateDateRange should calculate date range with current date as end date if not provided 1`] = `2022-01-01T00:00:00.000Z`;
+
+exports[`calculateDateRange should calculate date range with end date and cutoff days 1`] = `
+Object {
+  "endDate": 2022-01-31T00:00:00.000Z,
+  "startDate": 2022-01-21T00:00:00.000Z,
+}
+`;
+
+exports[`calculateDateRange should calculate date range with start and end date 1`] = `
+Object {
+  "endDate": 2022-01-31T00:00:00.000Z,
+  "startDate": 2022-01-01T00:00:00.000Z,
+}
+`;
+
+exports[`collectReposByOrg should add a single repo to the correct namespace 1`] = `
+Map {
+  "apache" => Set {
+    "kafka",
+  },
+}
+`;
+
+exports[`collectReposByOrg should add multiple repos to the correct namespaces 1`] = `
+Map {
+  "apache" => Set {
+    "kafka",
+    "spark",
+  },
+  "facebook" => Set {
+    "react",
+  },
+}
+`;
+
+exports[`collectReposByOrg should handle an empty array of repositories 1`] = `Map {}`;
+
+exports[`collectReposByOrg should not overwrite existing repos in the same namespace 1`] = `
+Map {
+  "apache" => Set {
+    "kafka",
+    "spark",
+  },
+}
+`;

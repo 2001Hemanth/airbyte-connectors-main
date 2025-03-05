@@ -1,0 +1,9 @@
+query vcsRepositoryQuery($vcsRepoNames: [String]) {
+  vcs_Repository(where: {name: {_in: $vcsRepoNames}}, distinct_on: name) {
+    organization {
+      uid
+      source
+    }
+    name
+  }
+}

@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrgRepoFilter getOrganizations - all - empty list 1`] = `
+[
+  "org-1",
+  "org-2",
+  "org-3",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - all - no list 1`] = `
+[
+  "org-1",
+  "org-2",
+  "org-3",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - fetch public orgs 1`] = `
+[
+  "org-1",
+  "org-2",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - fine-grained token - no list 1`] = `
+[
+  "org-1",
+  "org-2",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - specific organizations excluded 1`] = `
+[
+  "org-3",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - specific organizations included 1`] = `
+[
+  "org-1",
+  "org-2",
+]
+`;
+
+exports[`OrgRepoFilter getOrganizations - visible organization not in listForAuthenticatedUser 1`] = `
+[
+  "org-1",
+  "org-oss",
+]
+`;
+
+exports[`OrgRepoFilter getRepositories (FarosGraph) - nothing included - nothing excluded 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories (FarosGraph) - nothing included - some excluded 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories (FarosGraph) - some included - nothing excluded 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": false,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories - all - empty list 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories - all - no list 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories - specific repositories excluded 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;
+
+exports[`OrgRepoFilter getRepositories - specific repositories included 1`] = `
+[
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-1",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-2",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-1",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-2",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+  {
+    "repo": {
+      "name": "repo-3",
+      "org": "org-3",
+    },
+    "syncRepoData": true,
+  },
+]
+`;

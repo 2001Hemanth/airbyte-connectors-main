@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index onBeforeRead filters project_tasks does not sync project_tasks when optimize_fetching_projects_and_tasks_with_full_tasks_sync 1`] = `
+Object {
+  "streams": Array [
+    Object {
+      "destination_sync_mode": "overwrite",
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks_full",
+      },
+      "sync_mode": "full_refresh",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead filters project_tasks sync project_tasks when missing state 1`] = `
+Object {
+  "streams": Array [
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "project_tasks",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks",
+      },
+      "sync_mode": "incremental",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead filters project_tasks sync project_tasks when project_tasks_max_staleness_hours is 0 1`] = `
+Object {
+  "streams": Array [
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "project_tasks",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks",
+      },
+      "sync_mode": "incremental",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead filters project_tasks sync project_tasks when project_tasks_max_staleness_hours is 0 2`] = `
+Object {
+  "streams": Array [
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "project_tasks",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks",
+      },
+      "sync_mode": "incremental",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead filters project_tasks sync project_tasks when stale 1`] = `
+Object {
+  "streams": Array [
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "project_tasks",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks",
+      },
+      "sync_mode": "incremental",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead filters project_tasks sync project_tasks when stale 2`] = `
+Object {
+  "streams": Array [
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    Object {
+      "stream": Object {
+        "json_schema": Object {},
+        "name": "tasks",
+      },
+      "sync_mode": "incremental",
+    },
+  ],
+}
+`;
+
+exports[`index streams - project tasks 1`] = `
+Array [
+  Object {
+    "project_gid": "p1",
+    "task_gid": "t1",
+  },
+]
+`;
+
+exports[`index streams - tasks 1`] = `
+Array [
+  Object {
+    "gid": "t1",
+    "modified_at": "2021-01-01T00:00:00.000Z",
+    "name": "task1",
+    "stories": Array [
+      Object {
+        "created_at": "2021-01-01T00:00:00.000Z",
+        "gid": "s1",
+        "resource_subtype": "marked_complete",
+      },
+    ],
+    "workspace": Object {
+      "gid": "w1",
+    },
+  },
+]
+`;

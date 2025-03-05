@@ -1,0 +1,19 @@
+query getTestPlans(
+  $jql: String,
+  $limit: Int!,
+  $start: Int
+) {
+  getTestPlans(
+    jql: $jql,
+    limit: $limit,
+    start: $start
+  ) {
+    total
+    start
+    limit
+    results {
+      issueId
+      jira(fields: ["key", "summary", "description", "labels"])
+    }
+  }
+}

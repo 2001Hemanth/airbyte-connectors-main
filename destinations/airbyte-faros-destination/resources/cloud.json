@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "title": "Cloud Edition",
+  "required": [
+    "api_key"
+  ],
+  "properties": {
+    "edition": {
+      "type": "string",
+      "title": "Cloud Edition",
+      "const": "cloud"
+    },
+    "api_url": {
+      "type": "string",
+      "title": "API URL",
+      "description": "The Faros API URL.",
+      "default": "https://prod.api.faros.ai"
+    },
+    "api_key": {
+      "title": "API Key",
+      "type": "string",
+      "description": "The Faros API key to access the API.",
+      "airbyte_secret": true
+    },
+    "graph": {
+      "type": "string",
+      "title": "Graph name",
+      "description": "The Faros graph name.",
+      "default": "default"
+    },
+    "cloud_graphql_upsert_batch_size": {
+      "type": "integer",
+      "title": "GraphQL upsert batch size",
+      "description": "Maximum number of records to execute in a single GraphQL upsert.",
+      "default": 10000
+    },
+    "cloud_graphql_batch_size": {
+      "type": "integer",
+      "title": "GraphQL mutation batch size",
+      "description": "Maximum number of mutations to execute in a single request to GraphQL backend.",
+      "default": 100
+    },
+    "check_connection": {
+      "type": "boolean",
+      "title": "Check Faros API Connection",
+      "description": "Check Faros API connection on init.",
+      "default": true
+    },
+    "upload_sync_logs": {
+      "type": "boolean",
+      "title": "Upload sync logs",
+      "description": "Upload sync logs to Faros.",
+      "default": true
+    },
+    "heartbeat_timeout": {
+      "type": "integer",
+      "title": "Heartbeat Timeout",
+      "description": "Timeout in seconds for heartbeat check. If the Faros API does not receive a heartbeat within this time, the sync will be considered failed.",
+      "default": 300
+    },
+    "heartbeat_interval": {
+      "type": "integer",
+      "title": "Heartbeat Interval",
+      "description": "Interval in seconds for the destination to send a heartbeat to the Faros API. If left blank, the interval will be set to 1/3 of the heartbeat timeout."
+    }
+  }
+}

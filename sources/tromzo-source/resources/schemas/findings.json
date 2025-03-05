@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "toolName": {
+      "type": "string"
+    },
+    "dbUpdatedAt": {
+      "type": "string"
+    },
+    "scannerCreatedAt": {
+      "type": "string"
+    },
+    "dueDate": {
+      "type": ["string", "null"]
+    },
+    "dismissReason": {
+      "type": ["string", "null"]
+    },
+    "dismissedAt": {
+      "type": "string"
+    },
+    "scannerDismissedAt": {
+      "type": "string"
+    },
+    "sourceFilename": {
+      "type": "string"
+    },
+    "sourcePath": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "vulnerableVersion": {
+      "type": "string"
+    },
+    "vulnerability": {
+      "type": "object",
+      "properties": {
+        "severity": {
+          "type": ["string", "null"]
+        },
+        "cve": {
+          "type": ["string", "null"]
+        },
+        "ghsa": {
+          "type": ["string", "null"]
+        },
+        "score": {
+          "type": ["number", "null"]
+        },
+        "fixAvailable": {
+          "type": "boolean"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "status": {
+      "type": "string"
+    },
+    "scannerStatus": {
+      "type": "string"
+    },
+    "line": {
+      "type": ["number", "null"]
+    },
+    "asset": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": ["string", "null"]
+        },
+        "service": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "projects": {
+      "type": ["string", "null"]
+    },
+    "key": {
+      "type": "string"
+    }
+  },
+  "required": ["toolName", "key"]
+}

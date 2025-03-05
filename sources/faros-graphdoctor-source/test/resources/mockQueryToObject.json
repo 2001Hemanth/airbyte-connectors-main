@@ -1,0 +1,50 @@
+{
+  "query orgTeamParentNull { org_Team { id name uid parentTeam { uid } } }": {
+    "org_Team": [
+      {
+        "id": "a",
+        "name": "b",
+        "uid": "c",
+        "parentTeam": {
+          "uid": "d"
+        }
+      },
+      {
+        "id": "a",
+        "name": "b",
+        "uid": "c",
+        "parentTeam": null
+      }
+    ]
+  },
+  "query  { teamOwnershipNulls { team {id} member {id} id } }": {
+    "org_TeamMembership": [
+      {
+        "team": {
+          "id": "a"
+        },
+        "member": {
+          "id": "b"
+        },
+        "id": "c"
+      },
+      {
+        "team": {
+          "id": "c"
+        },
+        "member": null,
+        "id": "c"
+      },
+      {
+        "team": null,
+        "member": {
+          "id": "c"
+        },
+        "id": "c"
+      }
+    ]
+  },
+  "zScoreQueryOptions": {"note": "This object is replaced by an object in another file (zScoreQueryResult.json)."},
+  "queryTitleToResponse": {"note": "This object is replaced by an object in another file (queryTitleToResponse.json)."},
+  "dataRecencyQuery": {"note": "This object is replaced by an object in another file (dataRecencyQueryResult.json)."}
+}

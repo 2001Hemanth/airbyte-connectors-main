@@ -1,0 +1,27 @@
+{
+  "vcsRepositoryQuery": {
+    "vcs_Repository": [
+      {
+        "organization": {
+          "uid": "test-org",
+          "source": "github"
+        },
+        "name": "dolos"
+      }
+    ]
+  },
+  "cicdArtifactQueryByCommitSha": {
+    "cicd_Artifact": [
+      {
+        "uid": "e99a18c428cb38d5f260853678922e03abd8334f",
+        "repository": {
+          "organization": {
+            "uid": "test-org",
+            "source": "github"
+          },
+          "uid": "123"
+        }
+      }
+    ]
+  }
+}

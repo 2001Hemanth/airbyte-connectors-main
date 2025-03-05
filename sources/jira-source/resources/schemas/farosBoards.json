@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "scrum",
+        "kanban"
+      ]
+    },
+    "issueSync": {
+      "type": "boolean"
+    },
+    "projectKey": {
+      "type": "string"
+    }
+  }
+}

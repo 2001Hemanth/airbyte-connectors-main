@@ -1,0 +1,89 @@
+{
+  "documentationUrl": "https://docs.faros.ai",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Bitbucket Server Spec",
+    "type": "object",
+    "required": [
+      "server_url"
+    ],
+    "additionalProperties": true,
+    "properties": {
+      "server_url": {
+        "type": "string",
+        "title": "Server URL",
+        "description": "Bitbucket Server URL",
+        "examples": [
+          "https://my.bitbucketserver.com"
+        ]
+      },
+      "username": {
+        "type": "string",
+        "description": "Bitbucket username. Either username/password or Access Token must be provided."
+      },
+      "password": {
+        "type": "string",
+        "description": "Bitbucket password",
+        "airbyte_secret": true
+      },
+      "token": {
+        "type": "string",
+        "title": "Access Token",
+        "description": "Personal Access Token for Bitbucket Server API authentication. See https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html for information on how to generate this token.",
+        "airbyte_secret": true
+      },
+      "projects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Projects",
+        "description": "Keys of your Bitbucket Server projects",
+        "examples": [
+          "PROJ"
+        ]
+      },
+      "repositories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Repositories",
+        "description": "Names of your Bitbucket repositories in the format 'project-key/repo-slug'. If you want to pull all repositories from a project, you can add the project key to the Projects list instead of listing the repositories here",
+        "examples": [
+          "PROJ/myrepo"
+        ]
+      },
+      "cutoff_days": {
+        "type": "integer",
+        "title": "Cutoff Days",
+        "default": 90,
+        "description": "Only fetch data updated after cutoff"
+      },
+      "page_size": {
+        "type": "integer",
+        "title": "Page Size",
+        "description": "Page size to use when requesting records from Bitbucket Server API",
+        "default": 25
+      },
+      "reject_unauthorized": {
+        "type": "boolean",
+        "title": "Enforce Certificate Validation",
+        "default": true,
+        "description": "Enforce certificate validation for the Bitbucket Server"
+      },
+      "repo_bucket_id": {
+        "type": "integer",
+        "title": "Bucket Number",
+        "description": "Bucket number for this source to determine which portion of repos to pull. Use it when distributing the load between multiple sources",
+        "default": 1
+      },
+      "repo_bucket_total": {
+        "type": "integer",
+        "title": "Total Number of Buckets",
+        "description": "Total number of buckets to distribute repos across. Use it when distributing the load between multiple sources",
+        "default": 1
+      }
+    }
+  }
+}

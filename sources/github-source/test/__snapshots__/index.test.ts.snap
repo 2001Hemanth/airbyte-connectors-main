@@ -1,0 +1,2533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index check connection - app invalid 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Invalid app configuration: app_id and private_key are required",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - app valid 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "status": "SUCCEEDED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - authentication missing 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Invalid authentication configuration: type should be "token" or "app"",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - enterprise not available using app 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Enterprise data is only available when authenticating with personal access token",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - invalid bucketing config - non positive integer 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "bucket_total must be a positive integer",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - invalid bucketing config - out of range 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "bucket_id must be between 1 and 2",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - no organizations 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "No visible organizations remain after applying inclusion and exclusion filters",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - token missing 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Invalid token configuration: personal_access_token is required",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - token valid 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "status": "SUCCEEDED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index round robin bucket execution 1`] = `
+{
+  "__bucket_execution_state": {
+    "last_executed_bucket_id": 2,
+  },
+}
+`;
+
+exports[`index streams - artifacts 1`] = `
+[
+  {
+    "archive_download_url": "https://api.github.com/repos/octo-org/octo-docs/actions/artifacts/11/zip",
+    "created_at": "2020-01-10T14:59:22Z",
+    "expired": false,
+    "expires_at": "2020-03-21T14:59:22Z",
+    "id": 11,
+    "name": "Rails",
+    "org": "github",
+    "repo": "Hello-World",
+    "run_id": 30433642,
+    "size_in_bytes": 556,
+    "updated_at": "2020-02-21T14:59:22Z",
+    "url": "https://api.github.com/repos/octo-org/octo-docs/actions/artifacts/11",
+    "workflow_id": 159038,
+  },
+  {
+    "archive_download_url": "https://api.github.com/repos/octo-org/octo-docs/actions/artifacts/13/zip",
+    "created_at": "2020-01-10T14:59:22Z",
+    "expired": false,
+    "expires_at": "2020-03-21T14:59:22Z",
+    "id": 13,
+    "name": "Test output",
+    "org": "github",
+    "repo": "Hello-World",
+    "run_id": 30433642,
+    "size_in_bytes": 453,
+    "updated_at": "2020-02-21T14:59:22Z",
+    "url": "https://api.github.com/repos/octo-org/octo-docs/actions/artifacts/13",
+    "workflow_id": 159038,
+  },
+]
+`;
+
+exports[`index streams - code scanning alerts 1`] = `
+[
+  {
+    "created_at": "2020-02-13T12:29:18Z",
+    "dismissed_at": null,
+    "dismissed_by": null,
+    "dismissed_comment": null,
+    "dismissed_reason": null,
+    "fixed_at": null,
+    "html_url": "https://github.com/octocat/hello-world/code-scanning/4",
+    "instances_url": "https://api.github.com/repos/octocat/hello-world/code-scanning/alerts/4/instances",
+    "most_recent_instance": {
+      "analysis_key": ".github/workflows/codeql-analysis.yml:CodeQL-Build",
+      "category": ".github/workflows/codeql-analysis.yml:CodeQL-Build",
+      "classifications": [
+        "test",
+      ],
+      "commit_sha": "39406e42cb832f683daa691dd652a8dc36ee8930",
+      "environment": "{}",
+      "location": {
+        "end_column": 18,
+        "end_line": 917,
+        "path": "spec-main/api-session-spec.ts",
+        "start_column": 7,
+        "start_line": 917,
+      },
+      "message": {
+        "text": "This path depends on a user-provided value.",
+      },
+      "ref": "refs/heads/main",
+      "state": "open",
+    },
+    "number": 4,
+    "org": "github",
+    "repo": "Hello-World",
+    "rule": {
+      "description": "Arbitrary file write during zip extraction",
+      "id": "js/zipslip",
+      "name": "js/zipslip",
+      "severity": "error",
+      "tags": [
+        "security",
+        "external/cwe/cwe-022",
+      ],
+    },
+    "state": "open",
+    "tool": {
+      "guid": null,
+      "name": "CodeQL",
+      "version": "2.4.0",
+    },
+    "updated_at": "2020-02-13T12:29:18Z",
+    "url": "https://api.github.com/repos/octocat/hello-world/code-scanning/alerts/4",
+  },
+  {
+    "created_at": "2020-02-13T12:29:18Z",
+    "dismissed_at": "2020-02-14T12:29:18Z",
+    "dismissed_by": "octocat",
+    "dismissed_comment": "This alert is not actually correct, because there's a sanitizer included in the library.",
+    "dismissed_reason": "false positive",
+    "fixed_at": null,
+    "html_url": "https://github.com/octocat/hello-world/code-scanning/3",
+    "instances_url": "https://api.github.com/repos/octocat/hello-world/code-scanning/alerts/3/instances",
+    "most_recent_instance": {
+      "analysis_key": ".github/workflows/codeql-analysis.yml:CodeQL-Build",
+      "category": ".github/workflows/codeql-analysis.yml:CodeQL-Build",
+      "classifications": [],
+      "commit_sha": "39406e42cb832f683daa691dd652a8dc36ee8930",
+      "environment": "{}",
+      "location": {
+        "end_column": 18,
+        "end_line": 917,
+        "path": "lib/ab12-gen.js",
+        "start_column": 7,
+        "start_line": 917,
+      },
+      "message": {
+        "text": "This path depends on a user-provided value.",
+      },
+      "ref": "refs/heads/main",
+      "state": "open",
+    },
+    "number": 3,
+    "org": "github",
+    "repo": "Hello-World",
+    "rule": {
+      "description": "Arbitrary file write during zip extraction",
+      "id": "js/zipslip",
+      "name": "js/zipslip",
+      "severity": "error",
+      "tags": [
+        "security",
+        "external/cwe/cwe-022",
+      ],
+    },
+    "state": "dismissed",
+    "tool": {
+      "guid": null,
+      "name": "CodeQL",
+      "version": "2.4.0",
+    },
+    "updated_at": "2020-02-13T12:29:18Z",
+    "url": "https://api.github.com/repos/octocat/hello-world/code-scanning/alerts/3",
+  },
+]
+`;
+
+exports[`index streams - commits - additions unavailable and page size 1 1`] = `
+"fragment commitFields on Commit {
+  oid
+  message
+  url
+  authoredDate
+  author {
+    name
+    email
+    user {
+      type: __typename
+      login
+      url
+    }
+  }
+  committer {
+    date
+  }
+  changedFilesIfAvailable
+  }
+"
+`;
+
+exports[`index streams - commits 1`] = `
+[
+  {
+    "additions": 23,
+    "author": {
+      "email": "jane@doe.noreply.github.com",
+      "name": "Jane Doe",
+      "user": {
+        "login": "janedoe",
+        "type": "User",
+        "url": "https://github.com/janedoe",
+      },
+    },
+    "authoredDate": "2024-07-10T05:00:56Z",
+    "branch": "master",
+    "changedFilesIfAvailable": 7,
+    "committer": {
+      "date": "2024-07-09T22:00:56-07:00",
+    },
+    "deletions": 5,
+    "message": "Added commit for testing",
+    "oid": "0ac47c4d800fc4581b632157a02a9c9b1a94b462",
+    "org": "github",
+    "repo": "Hello-World",
+    "url": "https://github.com/test/dolos/commit/0ac47c4d800fc4581b632157a02a9c9b1a94b462",
+  },
+  {
+    "additions": 11,
+    "author": {
+      "email": "jane@doe.noreply.github.com",
+      "name": "Jane Doe",
+      "user": {
+        "login": "janedoe",
+        "type": "User",
+        "url": "https://github.com/janedoe",
+      },
+    },
+    "authoredDate": "2024-07-10T07:10:56Z",
+    "branch": "master",
+    "changedFilesIfAvailable": 2,
+    "committer": {
+      "date": "2024-07-10T22:00:56-07:00",
+    },
+    "deletions": 3,
+    "message": "Another Commit",
+    "oid": "0ac47c4d800fc4581b632157a02a9c9b1a941234",
+    "org": "github",
+    "repo": "Hello-World",
+    "url": "https://github.com/test/dolos/commit/0ac47c4d800fc4581b632157a02a9c9b1a941234",
+  },
+]
+`;
+
+exports[`index streams - commits 2`] = `
+"fragment commitFields on Commit {
+  oid
+  message
+  url
+  authoredDate
+  author {
+    name
+    email
+    user {
+      type: __typename
+      login
+      url
+    }
+  }
+  committer {
+    date
+  }
+  changedFilesIfAvailable
+  additions
+  deletions
+}
+"
+`;
+
+exports[`index streams - copilot seats (empty) 1`] = `
+[
+  {
+    "empty": true,
+    "org": "github",
+  },
+]
+`;
+
+exports[`index streams - copilot seats with audit logs API 1`] = `
+[
+  {
+    "last_activity_at": "2021-10-14T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": null,
+    "startedAt": "2024-07-15T17:43:12.098Z",
+    "team": "justice-league",
+    "teamJoinedAt": "2024-07-15T17:43:12.098Z",
+    "user": "octocat",
+  },
+  {
+    "last_activity_at": "2021-10-13T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": "2021-11-01",
+    "startedAt": "2021-09-24T00:00:00.000Z",
+    "team": undefined,
+    "teamJoinedAt": undefined,
+    "user": "octokitten",
+  },
+  {
+    "endedAt": "2024-07-23T13:54:10.205Z",
+    "org": "github",
+    "team": "justice-league",
+    "teamLeftAt": "2024-07-23T13:54:10.205Z",
+    "user": "octokatty",
+  },
+]
+`;
+
+exports[`index streams - copilot seats with audit logs API but licenses dates fix disabled 1`] = `
+[
+  {
+    "last_activity_at": "2021-10-14T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": null,
+    "startedAt": "2021-08-04T00:00:00.000Z",
+    "team": "justice-league",
+    "teamJoinedAt": undefined,
+    "user": "octocat",
+  },
+  {
+    "last_activity_at": "2021-10-13T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": "2021-11-01",
+    "startedAt": "2021-09-24T00:00:00.000Z",
+    "team": undefined,
+    "teamJoinedAt": undefined,
+    "user": "octokitten",
+  },
+]
+`;
+
+exports[`index streams - copilot seats without audit logs API 1`] = `
+[
+  {
+    "last_activity_at": "2021-10-14T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": null,
+    "startedAt": "2021-08-04T00:00:00.000Z",
+    "team": "justice-league",
+    "teamJoinedAt": undefined,
+    "user": "octocat",
+  },
+  {
+    "last_activity_at": "2021-10-13T00:53:32-06:00",
+    "org": "github",
+    "pending_cancellation_date": "2021-11-01",
+    "startedAt": "2021-09-24T00:00:00.000Z",
+    "team": undefined,
+    "teamJoinedAt": undefined,
+    "user": "octokitten",
+  },
+]
+`;
+
+exports[`index streams - copilot usage with teams (GA API) 1`] = `
+[
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 246,
+        "active_users": 12,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 270,
+        "lines_suggested": 450,
+        "suggestions_count": 498,
+      },
+      {
+        "acceptances_count": 506,
+        "active_users": 14,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 540,
+        "lines_suggested": 1040,
+        "suggestions_count": 992,
+      },
+      {
+        "acceptances_count": 56,
+        "active_users": 3,
+        "editor": "neovim",
+        "language": "typescript",
+        "lines_accepted": 61,
+        "lines_suggested": 143,
+        "suggestions_count": 112,
+      },
+      {
+        "acceptances_count": 67,
+        "active_users": 4,
+        "editor": "neovim",
+        "language": "go",
+        "lines_accepted": 72,
+        "lines_suggested": 154,
+        "suggestions_count": 132,
+      },
+    ],
+    "day": "2024-06-24",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 875,
+    "total_active_chat_users": 13,
+    "total_active_users": 24,
+    "total_chat_copy_events": 19,
+    "total_chat_insertion_events": 23,
+    "total_chats": 55,
+    "total_lines_accepted": 943,
+    "total_lines_suggested": 1787,
+    "total_suggestions_count": 1734,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 246,
+        "active_users": 12,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 270,
+        "lines_suggested": 450,
+        "suggestions_count": 498,
+      },
+      {
+        "acceptances_count": 506,
+        "active_users": 14,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 540,
+        "lines_suggested": 1040,
+        "suggestions_count": 992,
+      },
+      {
+        "acceptances_count": 56,
+        "active_users": 3,
+        "editor": "neovim",
+        "language": "typescript",
+        "lines_accepted": 61,
+        "lines_suggested": 143,
+        "suggestions_count": 112,
+      },
+      {
+        "acceptances_count": 67,
+        "active_users": 4,
+        "editor": "neovim",
+        "language": "go",
+        "lines_accepted": 72,
+        "lines_suggested": 154,
+        "suggestions_count": 132,
+      },
+    ],
+    "day": "2024-06-24",
+    "org": "github",
+    "team": "justice-league",
+    "total_acceptances_count": 875,
+    "total_active_chat_users": 13,
+    "total_active_users": 24,
+    "total_chat_copy_events": 19,
+    "total_chat_insertion_events": 23,
+    "total_chats": 55,
+    "total_lines_accepted": 943,
+    "total_lines_suggested": 1787,
+    "total_suggestions_count": 1734,
+  },
+]
+`;
+
+exports[`index streams - copilot usage with teams 1`] = `
+[
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 250,
+        "active_users": 5,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 700,
+        "lines_suggested": 900,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 400,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 350,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 200,
+        "lines_suggested": 500,
+        "suggestions_count": 400,
+      },
+    ],
+    "day": "2023-10-15",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 800,
+    "total_active_chat_users": 4,
+    "total_active_users": 10,
+    "total_chat_acceptances": 32,
+    "total_chat_turns": 200,
+    "total_lines_accepted": 1200,
+    "total_lines_suggested": 1800,
+    "total_suggestions_count": 1000,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 600,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 6,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 250,
+        "lines_suggested": 300,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 150,
+        "lines_suggested": 200,
+        "suggestions_count": 200,
+      },
+    ],
+    "day": "2023-10-16",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 600,
+    "total_active_chat_users": 8,
+    "total_active_users": 12,
+    "total_chat_acceptances": 57,
+    "total_chat_turns": 426,
+    "total_lines_accepted": 700,
+    "total_lines_suggested": 1100,
+    "total_suggestions_count": 800,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 250,
+        "active_users": 5,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 700,
+        "lines_suggested": 900,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 400,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 350,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 200,
+        "lines_suggested": 500,
+        "suggestions_count": 400,
+      },
+    ],
+    "day": "2023-10-15",
+    "org": "github",
+    "team": "justice-league",
+    "total_acceptances_count": 800,
+    "total_active_chat_users": 4,
+    "total_active_users": 10,
+    "total_chat_acceptances": 32,
+    "total_chat_turns": 200,
+    "total_lines_accepted": 1200,
+    "total_lines_suggested": 1800,
+    "total_suggestions_count": 1000,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 600,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 6,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 250,
+        "lines_suggested": 300,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 150,
+        "lines_suggested": 200,
+        "suggestions_count": 200,
+      },
+    ],
+    "day": "2023-10-16",
+    "org": "github",
+    "team": "justice-league",
+    "total_acceptances_count": 600,
+    "total_active_chat_users": 8,
+    "total_active_users": 12,
+    "total_chat_acceptances": 57,
+    "total_chat_turns": 426,
+    "total_lines_accepted": 700,
+    "total_lines_suggested": 1100,
+    "total_suggestions_count": 800,
+  },
+]
+`;
+
+exports[`index streams - copilot usage with teams 2`] = `
+{
+  "faros_copilot_usage": {
+    "github": {
+      "cutoff": 1697414400000,
+    },
+  },
+}
+`;
+
+exports[`index streams - copilot usage without teams (GA API) 1`] = `
+[
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 246,
+        "active_users": 12,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 270,
+        "lines_suggested": 450,
+        "suggestions_count": 498,
+      },
+      {
+        "acceptances_count": 506,
+        "active_users": 14,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 540,
+        "lines_suggested": 1040,
+        "suggestions_count": 992,
+      },
+      {
+        "acceptances_count": 56,
+        "active_users": 3,
+        "editor": "neovim",
+        "language": "typescript",
+        "lines_accepted": 61,
+        "lines_suggested": 143,
+        "suggestions_count": 112,
+      },
+      {
+        "acceptances_count": 67,
+        "active_users": 4,
+        "editor": "neovim",
+        "language": "go",
+        "lines_accepted": 72,
+        "lines_suggested": 154,
+        "suggestions_count": 132,
+      },
+    ],
+    "day": "2024-06-24",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 875,
+    "total_active_chat_users": 13,
+    "total_active_users": 24,
+    "total_chat_copy_events": 19,
+    "total_chat_insertion_events": 23,
+    "total_chats": 55,
+    "total_lines_accepted": 943,
+    "total_lines_suggested": 1787,
+    "total_suggestions_count": 1734,
+  },
+]
+`;
+
+exports[`index streams - copilot usage without teams 1`] = `
+[
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 250,
+        "active_users": 5,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 700,
+        "lines_suggested": 900,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 400,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 350,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 200,
+        "lines_suggested": 500,
+        "suggestions_count": 400,
+      },
+    ],
+    "day": "2023-10-15",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 800,
+    "total_active_chat_users": 4,
+    "total_active_users": 10,
+    "total_chat_acceptances": 32,
+    "total_chat_turns": 200,
+    "total_lines_accepted": 1200,
+    "total_lines_suggested": 1800,
+    "total_suggestions_count": 1000,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 200,
+        "active_users": 2,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 300,
+        "lines_suggested": 600,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 6,
+        "editor": "jetbrains",
+        "language": "python",
+        "lines_accepted": 250,
+        "lines_suggested": 300,
+        "suggestions_count": 300,
+      },
+      {
+        "acceptances_count": 150,
+        "active_users": 3,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 150,
+        "lines_suggested": 200,
+        "suggestions_count": 200,
+      },
+    ],
+    "day": "2023-10-16",
+    "org": "github",
+    "team": null,
+    "total_acceptances_count": 600,
+    "total_active_chat_users": 8,
+    "total_active_users": 12,
+    "total_chat_acceptances": 57,
+    "total_chat_turns": 426,
+    "total_lines_accepted": 700,
+    "total_lines_suggested": 1100,
+    "total_suggestions_count": 800,
+  },
+]
+`;
+
+exports[`index streams - copilot usage without teams 2`] = `
+{
+  "faros_copilot_usage": {
+    "github": {
+      "cutoff": 1697414400000,
+    },
+  },
+}
+`;
+
+exports[`index streams - dependabot alerts 1`] = `
+[
+  {
+    "created_at": "2022-06-15T07:43:03Z",
+    "dependency": {
+      "manifest_path": "path/to/requirements.txt",
+      "package": {
+        "ecosystem": "pip",
+        "name": "django",
+      },
+      "scope": "runtime",
+    },
+    "dismissed_at": "2022-08-23T14:29:47Z",
+    "dismissed_by": "octocat",
+    "dismissed_comment": "This alert is accurate but we use a sanitizer.",
+    "dismissed_reason": "tolerable_risk",
+    "fixed_at": null,
+    "html_url": "https://github.com/octocat/hello-world/security/dependabot/2",
+    "number": 2,
+    "org": "github",
+    "repo": "Hello-World",
+    "security_advisory": {
+      "cve_id": "CVE-2018-6188",
+      "cvss": {
+        "score": 7.5,
+        "vector_string": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-200",
+          "name": "Exposure of Sensitive Information to an Unauthorized Actor",
+        },
+      ],
+      "description": "django.contrib.auth.forms.AuthenticationForm in Django 2.0 before 2.0.2, and 1.11.8 and 1.11.9, allows remote attackers to obtain potentially sensitive information by leveraging data exposure from the confirm_login_allowed() method, as demonstrated by discovering whether a user account is inactive.",
+      "ghsa_id": "GHSA-rf4j-j272-fj86",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-rf4j-j272-fj86",
+        },
+        {
+          "type": "CVE",
+          "value": "CVE-2018-6188",
+        },
+      ],
+      "published_at": "2018-10-03T21:13:54Z",
+      "references": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-6188",
+        },
+        {
+          "url": "https://github.com/advisories/GHSA-rf4j-j272-fj86",
+        },
+        {
+          "url": "https://usn.ubuntu.com/3559-1/",
+        },
+        {
+          "url": "https://www.djangoproject.com/weblog/2018/feb/01/security-releases/",
+        },
+        {
+          "url": "http://www.securitytracker.com/id/1040422",
+        },
+      ],
+      "severity": "high",
+      "summary": "Django allows remote attackers to obtain potentially sensitive information by leveraging data exposure from the confirm_login_allowed() method, as demonstrated by discovering whether a user account is inactive",
+      "updated_at": "2022-04-26T18:35:37Z",
+      "vulnerabilities": [
+        {
+          "first_patched_version": {
+            "identifier": "2.0.2",
+          },
+          "package": {
+            "ecosystem": "pip",
+            "name": "django",
+          },
+          "severity": "high",
+          "vulnerable_version_range": ">= 2.0.0, < 2.0.2",
+        },
+        {
+          "first_patched_version": {
+            "identifier": "1.11.10",
+          },
+          "package": {
+            "ecosystem": "pip",
+            "name": "django",
+          },
+          "severity": "high",
+          "vulnerable_version_range": ">= 1.11.8, < 1.11.10",
+        },
+      ],
+      "withdrawn_at": null,
+    },
+    "security_vulnerability": {
+      "first_patched_version": {
+        "identifier": "2.0.2",
+      },
+      "package": {
+        "ecosystem": "pip",
+        "name": "django",
+      },
+      "severity": "high",
+      "vulnerable_version_range": ">= 2.0.0, < 2.0.2",
+    },
+    "state": "dismissed",
+    "updated_at": "2022-08-23T14:29:47Z",
+    "url": "https://api.github.com/repos/octocat/hello-world/dependabot/alerts/2",
+  },
+  {
+    "created_at": "2022-06-14T15:21:52Z",
+    "dependency": {
+      "manifest_path": "path/to/requirements.txt",
+      "package": {
+        "ecosystem": "pip",
+        "name": "ansible",
+      },
+      "scope": "runtime",
+    },
+    "dismissed_at": null,
+    "dismissed_by": null,
+    "dismissed_comment": null,
+    "dismissed_reason": null,
+    "fixed_at": null,
+    "html_url": "https://github.com/octocat/hello-world/security/dependabot/1",
+    "number": 1,
+    "org": "github",
+    "repo": "Hello-World",
+    "security_advisory": {
+      "cve_id": "CVE-2021-20191",
+      "cvss": {
+        "score": 5.5,
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-532",
+          "name": "Insertion of Sensitive Information into Log File",
+        },
+      ],
+      "description": "A flaw was found in ansible. Credentials, such as secrets, are being disclosed in console log by default and not protected by no_log feature when using those modules. An attacker can take advantage of this information to steal those credentials. The highest threat from this vulnerability is to data confidentiality.",
+      "ghsa_id": "GHSA-8f4m-hccc-8qph",
+      "identifiers": [
+        {
+          "type": "GHSA",
+          "value": "GHSA-8f4m-hccc-8qph",
+        },
+        {
+          "type": "CVE",
+          "value": "CVE-2021-20191",
+        },
+      ],
+      "published_at": "2021-06-01T17:38:00Z",
+      "references": [
+        {
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-20191",
+        },
+        {
+          "url": "https://access.redhat.com/security/cve/cve-2021-20191",
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1916813",
+        },
+      ],
+      "severity": "medium",
+      "summary": "Insertion of Sensitive Information into Log File in ansible",
+      "updated_at": "2021-08-12T23:06:00Z",
+      "vulnerabilities": [
+        {
+          "first_patched_version": {
+            "identifier": "2.9.18",
+          },
+          "package": {
+            "ecosystem": "pip",
+            "name": "ansible",
+          },
+          "severity": "medium",
+          "vulnerable_version_range": ">= 2.9.0, < 2.9.18",
+        },
+        {
+          "first_patched_version": {
+            "identifier": "2.8.19",
+          },
+          "package": {
+            "ecosystem": "pip",
+            "name": "ansible",
+          },
+          "severity": "medium",
+          "vulnerable_version_range": "< 2.8.19",
+        },
+        {
+          "first_patched_version": {
+            "identifier": "2.10.7",
+          },
+          "package": {
+            "ecosystem": "pip",
+            "name": "ansible",
+          },
+          "severity": "medium",
+          "vulnerable_version_range": ">= 2.10.0, < 2.10.7",
+        },
+      ],
+      "withdrawn_at": null,
+    },
+    "security_vulnerability": {
+      "first_patched_version": {
+        "identifier": "2.8.19",
+      },
+      "package": {
+        "ecosystem": "pip",
+        "name": "ansible",
+      },
+      "severity": "medium",
+      "vulnerable_version_range": "< 2.8.19",
+    },
+    "state": "open",
+    "updated_at": "2022-06-14T15:21:52Z",
+    "url": "https://api.github.com/repos/octocat/hello-world/dependabot/alerts/1",
+  },
+]
+`;
+
+exports[`index streams - enterprise copilot seats (empty) 1`] = `
+[
+  {
+    "empty": true,
+    "enterprise": "github",
+  },
+]
+`;
+
+exports[`index streams - enterprise copilot seats 1`] = `
+[
+  {
+    "created_at": "2021-08-03T18:00:00-06:00",
+    "enterprise": "github",
+    "last_activity_at": "2021-10-14T00:53:32-06:00",
+    "pending_cancellation_date": null,
+    "updated_at": "2021-09-23T15:00:00-06:00",
+    "user": "octocat",
+  },
+  {
+    "created_at": "2021-09-23T18:00:00-06:00",
+    "enterprise": "github",
+    "last_activity_at": "2021-10-13T00:53:32-06:00",
+    "pending_cancellation_date": "2021-11-01",
+    "updated_at": "2021-09-23T15:00:00-06:00",
+    "user": "octokitten",
+  },
+]
+`;
+
+exports[`index streams - enterprise copilot usage 1`] = `
+[
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 246,
+        "active_users": 12,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 270,
+        "lines_suggested": 450,
+        "suggestions_count": 498,
+      },
+      {
+        "acceptances_count": 506,
+        "active_users": 14,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 540,
+        "lines_suggested": 1040,
+        "suggestions_count": 992,
+      },
+      {
+        "acceptances_count": 56,
+        "active_users": 3,
+        "editor": "neovim",
+        "language": "typescript",
+        "lines_accepted": 61,
+        "lines_suggested": 143,
+        "suggestions_count": 112,
+      },
+      {
+        "acceptances_count": 67,
+        "active_users": 4,
+        "editor": "neovim",
+        "language": "go",
+        "lines_accepted": 72,
+        "lines_suggested": 154,
+        "suggestions_count": 132,
+      },
+    ],
+    "day": "2024-06-24",
+    "enterprise": "github",
+    "team": null,
+    "total_acceptances_count": 875,
+    "total_active_chat_users": 13,
+    "total_active_users": 24,
+    "total_chat_copy_events": 19,
+    "total_chat_insertion_events": 23,
+    "total_chats": 55,
+    "total_lines_accepted": 943,
+    "total_lines_suggested": 1787,
+    "total_suggestions_count": 1734,
+  },
+  {
+    "breakdown": [
+      {
+        "acceptances_count": 246,
+        "active_users": 12,
+        "editor": "vscode",
+        "language": "python",
+        "lines_accepted": 270,
+        "lines_suggested": 450,
+        "suggestions_count": 498,
+      },
+      {
+        "acceptances_count": 506,
+        "active_users": 14,
+        "editor": "vscode",
+        "language": "ruby",
+        "lines_accepted": 540,
+        "lines_suggested": 1040,
+        "suggestions_count": 992,
+      },
+      {
+        "acceptances_count": 56,
+        "active_users": 3,
+        "editor": "neovim",
+        "language": "typescript",
+        "lines_accepted": 61,
+        "lines_suggested": 143,
+        "suggestions_count": 112,
+      },
+      {
+        "acceptances_count": 67,
+        "active_users": 4,
+        "editor": "neovim",
+        "language": "go",
+        "lines_accepted": 72,
+        "lines_suggested": 154,
+        "suggestions_count": 132,
+      },
+    ],
+    "day": "2024-06-24",
+    "enterprise": "github",
+    "team": "justice-league",
+    "total_acceptances_count": 875,
+    "total_active_chat_users": 13,
+    "total_active_users": 24,
+    "total_chat_copy_events": 19,
+    "total_chat_insertion_events": 23,
+    "total_chats": 55,
+    "total_lines_accepted": 943,
+    "total_lines_suggested": 1787,
+    "total_suggestions_count": 1734,
+  },
+]
+`;
+
+exports[`index streams - enterprise team memberships 1`] = `
+[
+  {
+    "enterprise": "github",
+    "team": "justice-league",
+    "user": {
+      "html_url": "https://github.com/octocat",
+      "login": "octocat",
+      "type": "User",
+    },
+    "user_login": "octocat",
+  },
+]
+`;
+
+exports[`index streams - enterprise teams 1`] = `
+[
+  {
+    "enterprise": "github",
+    "name": "Justice League",
+    "slug": "justice-league",
+  },
+]
+`;
+
+exports[`index streams - enterprises 1`] = `
+[
+  {
+    "createdAt": "2024-11-28T18:49:10Z",
+    "name": "GitHub",
+    "slug": "github",
+    "url": "https://github.com/enterprises/github",
+  },
+]
+`;
+
+exports[`index streams - issue comments 1`] = `
+[
+  {
+    "body": "Me too",
+    "created_at": "2011-04-14T16:00:49Z",
+    "html_url": "https://github.com/octocat/Hello-World/issues/1347#issuecomment-1",
+    "id": 1,
+    "issue_url": "https://api.github.com/repos/octocat/Hello-World/issues/1347",
+    "repository": "github/Hello-World",
+    "updated_at": "2011-04-14T16:00:49Z",
+    "user": {
+      "html_url": "https://github.com/octocat",
+      "login": "octocat",
+      "type": "User",
+    },
+  },
+]
+`;
+
+exports[`index streams - issues 1`] = `
+[
+  {
+    "assignments": {
+      "nodes": [
+        {
+          "assignee": {
+            "html_url": "https://github.com/janedoe",
+            "login": "janedoe",
+            "name": "Jane Doe",
+            "type": "User",
+          },
+          "createdAt": "2024-08-09T07:56:55Z",
+          "type": "AssignedEvent",
+        },
+        {
+          "assignee": {
+            "html_url": "https://github.com/janedoe",
+            "login": "janedoe",
+            "name": "Jane Doe",
+            "type": "User",
+          },
+          "createdAt": "2024-08-09T13:08:33Z",
+          "type": "UnassignedEvent",
+        },
+        {
+          "assignee": {
+            "html_url": "https://github.com/nehanda",
+            "login": "nehanda",
+            "name": "Nehanda",
+            "type": "User",
+          },
+          "createdAt": "2024-08-09T13:08:39Z",
+          "type": "AssignedEvent",
+        },
+      ],
+    },
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": null,
+      "type": "User",
+    },
+    "bodyText": "Description test 1",
+    "closedAt": "2024-08-09T13:33:38Z",
+    "createdAt": "2024-08-09T07:56:55Z",
+    "databaseId": 2457343272,
+    "labels": {
+      "nodes": [
+        {
+          "name": "bug",
+        },
+        {
+          "name": "good first issue",
+        },
+        {
+          "name": "help wanted",
+        },
+      ],
+    },
+    "org": "github",
+    "repo": "Hello-World",
+    "state": "CLOSED",
+    "title": "This is a test Issue",
+    "updatedAt": "2024-08-09T13:33:38Z",
+  },
+  {
+    "assignments": {
+      "nodes": [],
+    },
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": null,
+      "type": "User",
+    },
+    "bodyText": "Description test 2",
+    "closedAt": null,
+    "createdAt": "2024-08-10T07:56:55Z",
+    "databaseId": 2457343272,
+    "labels": {
+      "nodes": [
+        {
+          "name": "bug",
+        },
+      ],
+    },
+    "org": "github",
+    "repo": "Hello-World",
+    "state": "OPEN",
+    "title": "This is another test Issue",
+    "updatedAt": "2024-08-10T13:33:38Z",
+  },
+]
+`;
+
+exports[`index streams - labels 1`] = `
+[
+  {
+    "name": "dependencies",
+    "org": "github",
+    "repo": "Hello-World",
+    "tmsEnabled": false,
+  },
+  {
+    "name": "typescript",
+    "org": "github",
+    "repo": "Hello-World",
+    "tmsEnabled": false,
+  },
+  {
+    "name": "python",
+    "org": "github",
+    "repo": "Hello-World",
+    "tmsEnabled": false,
+  },
+]
+`;
+
+exports[`index streams - organizations 1`] = `
+[
+  {
+    "created_at": "2008-01-14T04:33:35Z",
+    "html_url": "https://github.com/octocat",
+    "login": "github",
+    "name": "github",
+    "type": "Organization",
+    "updated_at": "2014-03-03T18:58:10Z",
+  },
+]
+`;
+
+exports[`index streams - outside collaborators 1`] = `
+[
+  {
+    "html_url": "https://github.com/nehanda",
+    "login": "nehanda",
+    "org": "github",
+    "type": "User",
+  },
+  {
+    "email": "johndoe@mail.com",
+    "html_url": "https://github.com/johndoe",
+    "login": "johndoe",
+    "name": "John Doe",
+    "org": "github",
+    "type": "User",
+  },
+]
+`;
+
+exports[`index streams - projects 1`] = `
+[
+  {
+    "body": null,
+    "created_at": "2024-08-07T06:55:35Z",
+    "id": "PVT_kwDOCoajGc4Al3Uy",
+    "name": "Some Project without body",
+    "org": "github",
+    "updated_at": "2024-08-07T06:55:43Z",
+  },
+  {
+    "body": null,
+    "created_at": "2024-08-05T15:08:19Z",
+    "id": "Another Project without body",
+    "name": "@matiaslcoulougian's untitled project",
+    "org": "github",
+    "updated_at": "2024-08-05T15:08:19Z",
+  },
+  {
+    "body": "Another one",
+    "created_at": "2024-08-05T15:01:36Z",
+    "id": "PVT_kwDOCoajGc4Alx1r",
+    "name": "Test Project 2",
+    "org": "github",
+    "updated_at": "2024-08-05T15:01:48Z",
+  },
+  {
+    "body": "This is a project to test this capability",
+    "created_at": "2024-08-05T15:00:51Z",
+    "id": "PVT_kwDOCoajGc4Alx1f",
+    "name": "Test Project 1",
+    "org": "github",
+    "updated_at": "2024-08-05T15:01:26Z",
+  },
+  {
+    "body": "This is the first project",
+    "created_at": "2024-01-01T12:00:00Z",
+    "id": "1",
+    "name": "Project Alpha",
+    "org": "github",
+    "updated_at": "2024-01-02T12:00:00Z",
+  },
+  {
+    "body": "This is the second project",
+    "created_at": "2024-02-01T12:00:00Z",
+    "id": "2",
+    "name": "Project Beta",
+    "org": "github",
+    "updated_at": "2024-02-02T12:00:00Z",
+  },
+  {
+    "body": "This is the third project",
+    "created_at": "2024-03-01T12:00:00Z",
+    "id": "3",
+    "name": "Project Gamma",
+    "org": "github",
+    "updated_at": "2024-03-02T12:00:00Z",
+  },
+]
+`;
+
+exports[`index streams - pull request comments 1`] = `
+[
+  {
+    "body": "This is a test comment.",
+    "created_at": "2024-07-18T17:04:03Z",
+    "html_url": "https://github.com/rest/test/pull/1596#discussion_r1000000001",
+    "id": 1683209890,
+    "pull_request_url": "https://api.github.com/repos/test/dolos/pulls/1234",
+    "repository": "github/Hello-World",
+    "updated_at": "2024-07-18T17:04:04Z",
+    "user": {
+      "html_url": "https://github.com/jdoe",
+      "login": "jdoe",
+      "type": "User",
+    },
+  },
+  {
+    "body": "Another comment to test :)",
+    "created_at": "2024-07-18T17:04:03Z",
+    "html_url": "https://github.com/rest/test/pull/1596#discussion_r1000000002",
+    "id": 1683209891,
+    "pull_request_url": "https://api.github.com/repos/test/dolos/pulls/1234",
+    "repository": "github/Hello-World",
+    "updated_at": "2024-07-18T17:04:04Z",
+    "user": {
+      "html_url": "https://github.com/jdoe",
+      "login": "jdoe",
+      "type": "User",
+    },
+  },
+]
+`;
+
+exports[`index streams - pull requests 1`] = `
+[
+  {
+    "additions": 1077,
+    "author": {
+      "html_url": "https://github.com/dolos",
+      "login": "dolos",
+      "name": "Dolos",
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "**Related issues**
+https://github.com/faros-ai/tickets/issues/120
+
+**Describe the proposed solution**
+Optional \`employee\` param changes DORA app behavior to return metrics rolled-up by owner.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context about the changes here.
+",
+    "changedFiles": 21,
+    "comments": {
+      "totalCount": 3,
+    },
+    "commits": {
+      "nodes": [
+        {
+          "commit": {
+            "oid": "b4c35c299ad22fe858569482a7696597ca038651",
+          },
+        },
+      ],
+      "totalCount": 13,
+    },
+    "coverage": null,
+    "createdAt": "2021-02-12T05:35:19Z",
+    "deletions": 763,
+    "files": [
+      {
+        "additions": 15,
+        "deletions": 0,
+        "path": "dolos/test/file.ts",
+      },
+    ],
+    "headRefName": "dora-employee-param",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "isDraft": false,
+    "labels": [
+      {
+        "name": "dependencies",
+      },
+      {
+        "name": "typescript",
+      },
+    ],
+    "mergeCommit": {
+      "oid": "b4c35c299ad22fe858569482a7696597ca038651",
+    },
+    "mergedAt": "2021-02-16T17:15:27Z",
+    "number": 48,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [
+      {
+        "requestedReviewer": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+      },
+    ],
+    "reviews": [
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "LGTM",
+        "comments": {
+          "totalCount": 1,
+        },
+        "databaseId": 2192199611,
+        "state": "COMMENTED",
+        "submittedAt": "2021-02-04T21:53:09Z",
+        "updatedAt": "2021-03-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199611",
+      },
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "",
+        "comments": {
+          "totalCount": 0,
+        },
+        "databaseId": 2192199612,
+        "state": "APPROVED",
+        "submittedAt": "2021-03-04T21:53:09Z",
+        "updatedAt": "2021-03-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199612",
+      },
+    ],
+    "state": "MERGED",
+    "title": "DORA apps take optional employee uid param",
+    "updatedAt": "2021-02-16T17:15:29Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/48",
+  },
+  {
+    "additions": 0,
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": "nehanda",
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "**Related issues**
+Ensures we only expose the apps that can run on the latest Faros API 
+
+**Describe the proposed solution**
+Moving all apps that are not compatible with our new schema and/or do not have feed and model support yet. As we add more feeds re-add them after full testing.
+
+**Describe alternatives you've considered**
+N/A
+
+",
+    "changedFiles": 140,
+    "comments": {
+      "totalCount": 1,
+    },
+    "commits": {
+      "totalCount": 2,
+    },
+    "coverage": null,
+    "createdAt": "2021-02-04T23:54:56Z",
+    "deletions": 4787,
+    "files": [
+      {
+        "additions": 14,
+        "deletions": 0,
+        "path": "dolos/test/file.ts",
+      },
+      {
+        "additions": 33,
+        "deletions": 2,
+        "path": "nehanda/test/file2.ts",
+      },
+      {
+        "additions": 1,
+        "deletions": 10,
+        "path": "nehanda/test/file3.ts",
+      },
+    ],
+    "headRefName": "nehanda/cleanup-apps",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "isDraft": false,
+    "labels": [],
+    "mergeCommit": null,
+    "mergedAt": null,
+    "number": 47,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [],
+    "reviews": [],
+    "state": "CLOSED",
+    "title": "Move apps with no feed support temporarily to internal",
+    "updatedAt": "2021-02-11T18:10:08Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/47",
+  },
+  {
+    "additions": 109,
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": null,
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "Handle cases and add tests for when:
+1. Deployments have no associated builds
+2. Builds have no associated commits",
+    "changedFiles": 2,
+    "comments": {
+      "totalCount": 0,
+    },
+    "commits": {
+      "totalCount": 9,
+    },
+    "coverage": null,
+    "createdAt": "2021-02-04T15:49:42Z",
+    "deletions": 23,
+    "files": [
+      {
+        "additions": 14,
+        "deletions": 0,
+        "path": "dolos/test/file.ts",
+      },
+      {
+        "additions": 10,
+        "deletions": 2,
+        "path": "nehanda/test/file2.ts",
+      },
+    ],
+    "headRefName": "fix-edge-cases",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "dora",
+      },
+    },
+    "isDraft": false,
+    "labels": [
+      {
+        "name": "dependencies",
+      },
+    ],
+    "mergeCommit": {
+      "oid": "8fe76c0e99f7e00533181b3749735fcf9fdea206",
+    },
+    "mergedAt": "2021-02-04T21:53:00Z",
+    "number": 46,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [
+      {
+        "requestedReviewer": {
+          "html_url": "https://github.com/user1",
+          "login": "user1",
+          "name": null,
+          "type": "User",
+        },
+      },
+      {
+        "requestedReviewer": {
+          "members": {
+            "nodes": [
+              {
+                "html_url": "https://github.com/user2",
+                "login": "user2",
+                "name": null,
+                "type": "User",
+              },
+              {
+                "html_url": "https://github.com/user3",
+                "login": "user3",
+                "name": null,
+                "type": "User",
+              },
+            ],
+          },
+          "type": "Team",
+        },
+      },
+    ],
+    "reviews": [
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "",
+        "comments": {
+          "totalCount": 0,
+        },
+        "databaseId": 2192199689,
+        "state": "APPROVED",
+        "submittedAt": "2021-02-04T21:53:09Z",
+        "updatedAt": "2021-02-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199689",
+      },
+    ],
+    "state": "MERGED",
+    "title": "Fix edge cases for deploy cycle breakdown",
+    "updatedAt": "2021-02-04T21:53:09Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/46",
+  },
+]
+`;
+
+exports[`index streams - pull requests 2`] = `
+{
+  "faros_pull_requests": {
+    "github/hello-world": {
+      "cutoff": 1613495729000,
+    },
+  },
+}
+`;
+
+exports[`index streams - pull requests backfill with bucketing and round robin execution only affects bucketing state 1`] = `
+{
+  "__bucket_execution_state": {
+    "last_executed_bucket_id": 1,
+  },
+  "faros_pull_requests": {
+    "github/hello-world": {
+      "cutoff": 123,
+    },
+  },
+}
+`;
+
+exports[`index streams - pull requests diff coverage 1`] = `
+[
+  {
+    "additions": 1077,
+    "author": {
+      "html_url": "https://github.com/dolos",
+      "login": "dolos",
+      "name": "Dolos",
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "**Related issues**
+https://github.com/faros-ai/tickets/issues/120
+
+**Describe the proposed solution**
+Optional \`employee\` param changes DORA app behavior to return metrics rolled-up by owner.
+
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context about the changes here.
+",
+    "changedFiles": 21,
+    "comments": {
+      "totalCount": 3,
+    },
+    "commits": {
+      "nodes": [
+        {
+          "commit": {
+            "oid": "b4c35c299ad22fe858569482a7696597ca038651",
+          },
+        },
+      ],
+      "totalCount": 13,
+    },
+    "coverage": {
+      "commitSha": "b4c35c299ad22fe858569482a7696597ca038651",
+      "coveragePercentage": 97,
+      "createdAt": 2024-06-12T23:20:22.000Z,
+    },
+    "createdAt": "2021-02-12T05:35:19Z",
+    "deletions": 763,
+    "files": [],
+    "headRefName": "dora-employee-param",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "isDraft": false,
+    "labels": [
+      {
+        "name": "dependencies",
+      },
+      {
+        "name": "typescript",
+      },
+    ],
+    "mergeCommit": {
+      "oid": "b4c35c299ad22fe858569482a7696597ca038651",
+    },
+    "mergedAt": "2021-02-16T17:15:27Z",
+    "number": 48,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [
+      {
+        "requestedReviewer": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+      },
+    ],
+    "reviews": [
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "LGTM",
+        "comments": {
+          "totalCount": 1,
+        },
+        "databaseId": 2192199611,
+        "state": "COMMENTED",
+        "submittedAt": "2021-02-04T21:53:09Z",
+        "updatedAt": "2021-03-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199611",
+      },
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "",
+        "comments": {
+          "totalCount": 0,
+        },
+        "databaseId": 2192199612,
+        "state": "APPROVED",
+        "submittedAt": "2021-03-04T21:53:09Z",
+        "updatedAt": "2021-03-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199612",
+      },
+    ],
+    "state": "MERGED",
+    "title": "DORA apps take optional employee uid param",
+    "updatedAt": "2021-02-16T17:15:29Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/48",
+  },
+  {
+    "additions": 0,
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": "nehanda",
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "**Related issues**
+Ensures we only expose the apps that can run on the latest Faros API 
+
+**Describe the proposed solution**
+Moving all apps that are not compatible with our new schema and/or do not have feed and model support yet. As we add more feeds re-add them after full testing.
+
+**Describe alternatives you've considered**
+N/A
+
+",
+    "changedFiles": 140,
+    "comments": {
+      "totalCount": 1,
+    },
+    "commits": {
+      "totalCount": 2,
+    },
+    "coverage": null,
+    "createdAt": "2021-02-04T23:54:56Z",
+    "deletions": 4787,
+    "files": [],
+    "headRefName": "nehanda/cleanup-apps",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "isDraft": false,
+    "labels": [],
+    "mergeCommit": null,
+    "mergedAt": null,
+    "number": 47,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [],
+    "reviews": [],
+    "state": "CLOSED",
+    "title": "Move apps with no feed support temporarily to internal",
+    "updatedAt": "2021-02-11T18:10:08Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/47",
+  },
+  {
+    "additions": 109,
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "name": null,
+      "type": "User",
+    },
+    "baseRefName": "main",
+    "baseRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "faros-ai",
+      },
+    },
+    "body": "Handle cases and add tests for when:
+1. Deployments have no associated builds
+2. Builds have no associated commits",
+    "changedFiles": 2,
+    "comments": {
+      "totalCount": 0,
+    },
+    "commits": {
+      "totalCount": 9,
+    },
+    "coverage": null,
+    "createdAt": "2021-02-04T15:49:42Z",
+    "deletions": 23,
+    "files": [],
+    "headRefName": "fix-edge-cases",
+    "headRepository": {
+      "name": "faros-apps",
+      "owner": {
+        "login": "dora",
+      },
+    },
+    "isDraft": false,
+    "labels": [
+      {
+        "name": "dependencies",
+      },
+    ],
+    "mergeCommit": {
+      "oid": "8fe76c0e99f7e00533181b3749735fcf9fdea206",
+    },
+    "mergedAt": "2021-02-04T21:53:00Z",
+    "number": 46,
+    "org": "github",
+    "repo": "Hello-World",
+    "reviewEvents": {
+      "nodes": [],
+    },
+    "reviewRequests": [
+      {
+        "requestedReviewer": {
+          "html_url": "https://github.com/user1",
+          "login": "user1",
+          "name": null,
+          "type": "User",
+        },
+      },
+      {
+        "requestedReviewer": {
+          "members": {
+            "nodes": [
+              {
+                "html_url": "https://github.com/user2",
+                "login": "user2",
+                "name": null,
+                "type": "User",
+              },
+              {
+                "html_url": "https://github.com/user3",
+                "login": "user3",
+                "name": null,
+                "type": "User",
+              },
+            ],
+          },
+          "type": "Team",
+        },
+      },
+    ],
+    "reviews": [
+      {
+        "author": {
+          "html_url": "https://github.com/nehanda",
+          "login": "nehanda",
+          "name": null,
+          "type": "User",
+        },
+        "body": "",
+        "comments": {
+          "totalCount": 0,
+        },
+        "databaseId": 2192199689,
+        "state": "APPROVED",
+        "submittedAt": "2021-02-04T21:53:09Z",
+        "updatedAt": "2021-02-04T21:54:10Z",
+        "url": "https://github.com/test/dolos/pull/1234#pullrequestreview-2192199689",
+      },
+    ],
+    "state": "MERGED",
+    "title": "Fix edge cases for deploy cycle breakdown",
+    "updatedAt": "2021-02-04T21:53:09Z",
+    "url": "https://github.com/faros-ai/faros-apps/pull/46",
+  },
+]
+`;
+
+exports[`index streams - releases 1`] = `
+[
+  {
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "type": "User",
+    },
+    "body": "## What's Changed\\r\\n* Lots of new stuff!",
+    "created_at": "2024-08-02T17:48:35Z",
+    "draft": false,
+    "html_url": "https://api.github.com/repos/test/dolos/releases/168491573",
+    "id": 168491573,
+    "name": "v0.0.1",
+    "published_at": "2024-08-02T18:19:55Z",
+    "repository": "github/Hello-World",
+    "tag_name": "v0.0.1",
+  },
+  {
+    "author": {
+      "html_url": "https://github.com/nehanda",
+      "login": "nehanda",
+      "type": "User",
+    },
+    "body": "## What's Changed\\r\\n* Lots of stuff! Full Changelog**: https://github.com/test/dolos/compare/v0.0.1...v0.0.2",
+    "created_at": "2024-08-01T15:31:36Z",
+    "draft": false,
+    "html_url": "https://api.github.com/repos/test/dolos/releases/168274419",
+    "id": 168274419,
+    "name": "v0.0.2",
+    "published_at": "2024-08-01T15:39:35Z",
+    "repository": "github/Hello-World",
+    "tag_name": "v0.0.2",
+  },
+  {
+    "author": {
+      "html_url": "https://github.com/jdoe",
+      "login": "jdoe",
+      "type": "User",
+    },
+    "body": "## What's Changed\\r\\n* Lots of stuff! Full Changelog**: https://github.com/test/dolos/compare/v0.0.2...v0.0.3",
+    "created_at": "2024-07-31T22:07:35Z",
+    "draft": false,
+    "html_url": "https://api.github.com/repos/test/dolos/releases/168130489",
+    "id": 168130489,
+    "name": "v0.0.3",
+    "published_at": "2024-07-31T22:08:45Z",
+    "repository": "github/Hello-World",
+    "tag_name": "v0.0.3",
+  },
+]
+`;
+
+exports[`index streams - repositories 1`] = `
+[
+  {
+    "archived": false,
+    "created_at": "2011-01-26T19:01:12Z",
+    "default_branch": "master",
+    "description": "This your first repo!",
+    "full_name": "octocat/Hello-World",
+    "html_url": "https://github.com/octocat/Hello-World",
+    "language": null,
+    "name": "Hello-World",
+    "org": "github",
+    "private": false,
+    "size": 108,
+    "syncRepoData": true,
+    "tmsEnabled": false,
+    "topics": [
+      "octocat",
+      "atom",
+      "electron",
+      "api",
+    ],
+    "updated_at": "2011-01-26T19:14:43Z",
+  },
+]
+`;
+
+exports[`index streams - repositories with bucketing 1`] = `
+[
+  {
+    "archived": false,
+    "created_at": "2023-06-01T12:00:00Z",
+    "default_branch": "main",
+    "description": "This is a new repo!",
+    "full_name": "octocat/New-Repo",
+    "html_url": "https://github.com/octocat/New-Repo",
+    "language": null,
+    "name": "New-Repo",
+    "org": "github",
+    "private": false,
+    "size": 256,
+    "syncRepoData": true,
+    "tmsEnabled": false,
+    "topics": [
+      "github",
+      "api",
+      "example",
+    ],
+    "updated_at": "2023-07-01T12:00:00Z",
+  },
+]
+`;
+
+exports[`index streams - saml sso users 1`] = `
+[
+  {
+    "org": "github",
+    "samlIdentity": {
+      "nameId": "mt@faros.ai",
+    },
+    "user": {
+      "html_url": "https://github.com/tovbinm",
+      "login": "tovbinm",
+      "type": "User",
+    },
+    "user_login": "tovbinm",
+  },
+  {
+    "org": "github",
+    "samlIdentity": {
+      "nameId": "jennie@faros.ai",
+    },
+    "user": {
+      "html_url": "https://github.com/jeniii",
+      "login": "jeniii",
+      "type": "User",
+    },
+    "user_login": "jeniii",
+  },
+]
+`;
+
+exports[`index streams - secret scanning alerts 1`] = `
+[
+  {
+    "created_at": "2020-11-06T18:48:51Z",
+    "html_url": "https://github.com/owner/private-repo/security/secret-scanning/2",
+    "locations_url": "https://api.github.com/repos/owner/private-repo/secret-scanning/alerts/2/locations",
+    "number": 2,
+    "org": "github",
+    "push_protection_bypassed": true,
+    "push_protection_bypassed_at": "2020-11-06T21:48:51Z",
+    "push_protection_bypassed_by": "monalisa",
+    "repo": "Hello-World",
+    "resolution": "false_positive",
+    "resolution_comment": "Example comment",
+    "resolved_at": "2020-11-07T02:47:13Z",
+    "resolved_by": "monalisa",
+    "secret": "aio_XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "secret_type": "adafruit_io_key",
+    "secret_type_display_name": "Adafruit IO Key",
+    "state": "resolved",
+    "updated_at": "2020-11-06T18:18:30Z",
+    "url": "https://api.github.com/repos/owner/private-repo/secret-scanning/alerts/2",
+    "validity": "inactive",
+  },
+  {
+    "created_at": "2020-11-06T18:18:30Z",
+    "html_url": "https://github.com/owner/repo/security/secret-scanning/1",
+    "locations_url": "https://api.github.com/repos/owner/private-repo/secret-scanning/alerts/1/locations",
+    "number": 1,
+    "org": "github",
+    "push_protection_bypassed": false,
+    "push_protection_bypassed_at": null,
+    "push_protection_bypassed_by": null,
+    "repo": "Hello-World",
+    "resolution": null,
+    "resolution_comment": null,
+    "resolved_at": null,
+    "resolved_by": null,
+    "secret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-us2",
+    "secret_type": "mailchimp_api_key",
+    "secret_type_display_name": "Mailchimp API Key",
+    "state": "open",
+    "updated_at": "2020-11-06T18:18:30Z",
+    "url": "https://api.github.com/repos/owner/repo/secret-scanning/alerts/1",
+    "validity": "unknown",
+  },
+]
+`;
+
+exports[`index streams - tags 1`] = `
+[
+  {
+    "commit": {
+      "committedDate": "2024-03-28T19:07:25Z",
+      "sha": "a91f0eb6e2c0dd050a72bf2e2b73878a9342403c",
+      "type": "Commit",
+    },
+    "commit_sha": "a91f0eb6e2c0dd050a72bf2e2b73878a9342403c",
+    "name": "v0.0.1",
+    "repository": "github/Hello-World",
+  },
+  {
+    "commit": {
+      "committedDate": "2024-04-03T14:30:21Z",
+      "sha": "97b456be6dab02610a7f7683be82a5c7191372c0",
+      "type": "Commit",
+    },
+    "commit_sha": "97b456be6dab02610a7f7683be82a5c7191372c0",
+    "name": "v0.0.2",
+    "repository": "github/Hello-World",
+  },
+  {
+    "commit": {
+      "committedDate": "2024-04-03T18:52:19Z",
+      "sha": "8c73521620f8cd70a07c7a475dfe3dd09f7690cf",
+      "type": "Commit",
+    },
+    "commit_sha": "8c73521620f8cd70a07c7a475dfe3dd09f7690cf",
+    "name": "v0.0.3",
+    "repository": "github/Hello-World",
+  },
+]
+`;
+
+exports[`index streams - team memberships 1`] = `
+[
+  {
+    "org": "github",
+    "team": "justice-league",
+    "user": {
+      "html_url": "https://github.com/octocat",
+      "login": "octocat",
+      "type": "User",
+    },
+    "user_login": "octocat",
+  },
+]
+`;
+
+exports[`index streams - teams 1`] = `
+[
+  {
+    "description": "A great team.",
+    "name": "Justice League",
+    "org": "github",
+    "parentSlug": null,
+    "slug": "justice-league",
+  },
+]
+`;
+
+exports[`index streams - users 1`] = `
+[
+  {
+    "email": "",
+    "html_url": "https://github.com/octocat",
+    "login": "octocat",
+    "name": "Octocat",
+    "org": "github",
+    "type": "User",
+  },
+  {
+    "email": "",
+    "html_url": "https://github.com/octokitten",
+    "login": "octokitten",
+    "name": "Octokitten",
+    "org": "github",
+    "type": "User",
+  },
+]
+`;
+
+exports[`index streams - workflow jobs 1`] = `
+[
+  {
+    "completed_at": "2020-01-20T17:44:39Z",
+    "conclusion": "success",
+    "head_branch": "main",
+    "head_sha": "f83a356604ae3c5d03e1b46ef4d1ca77d64a90b0",
+    "html_url": "https://github.com/octo-org/octo-repo/runs/29679449/jobs/399444496",
+    "id": 399444496,
+    "labels": [
+      "self-hosted",
+      "foo",
+      "bar",
+    ],
+    "name": "build",
+    "org": "github",
+    "repo": "Hello-World",
+    "run_id": 29679449,
+    "started_at": "2020-01-20T17:42:40Z",
+    "status": "completed",
+    "url": "https://api.github.com/repos/octo-org/octo-repo/actions/jobs/399444496",
+    "workflow_id": 159038,
+    "workflow_name": "CI",
+  },
+]
+`;
+
+exports[`index streams - workflow runs 1`] = `
+[
+  {
+    "conclusion": null,
+    "created_at": "2020-01-22T19:33:08Z",
+    "display_title": "Update README.md",
+    "event": "push",
+    "head_branch": "master",
+    "head_sha": "acb5820ced9479c074f688cc328bf03f341a511d",
+    "html_url": "https://github.com/octo-org/octo-repo/actions/runs/30433642",
+    "id": 30433642,
+    "name": "Build",
+    "org": "github",
+    "path": ".github/workflows/build.yml@main",
+    "repo": "Hello-World",
+    "run_attempt": 1,
+    "run_number": 562,
+    "run_started_at": "2020-01-22T19:33:08Z",
+    "status": "queued",
+    "updated_at": "2020-01-22T19:33:08Z",
+    "url": "https://api.github.com/repos/octo-org/octo-repo/actions/runs/30433642",
+    "workflow_id": 159038,
+  },
+]
+`;
+
+exports[`index streams - workflows 1`] = `
+[
+  {
+    "badge_url": "https://github.com/octo-org/octo-repo/workflows/CI/badge.svg",
+    "created_at": "2020-01-08T23:48:37.000-08:00",
+    "html_url": "https://github.com/octo-org/octo-repo/blob/master/.github/workflows/161335",
+    "id": 161335,
+    "name": "CI",
+    "node_id": "MDg6V29ya2Zsb3cxNjEzMzU=",
+    "org": "github",
+    "path": ".github/workflows/blank.yaml",
+    "repo": "Hello-World",
+    "state": "active",
+    "updated_at": "2020-01-08T23:50:21.000-08:00",
+    "url": "https://api.github.com/repos/octo-org/octo-repo/actions/workflows/161335",
+  },
+  {
+    "badge_url": "https://github.com/octo-org/octo-repo/workflows/Linter/badge.svg",
+    "created_at": "2020-01-08T23:48:37.000-08:00",
+    "html_url": "https://github.com/octo-org/octo-repo/blob/master/.github/workflows/269289",
+    "id": 269289,
+    "name": "Linter",
+    "node_id": "MDE4OldvcmtmbG93IFNlY29uZGFyeTI2OTI4OQ==",
+    "org": "github",
+    "path": ".github/workflows/linter.yaml",
+    "repo": "Hello-World",
+    "state": "active",
+    "updated_at": "2020-01-08T23:50:21.000-08:00",
+    "url": "https://api.github.com/repos/octo-org/octo-repo/actions/workflows/269289",
+  },
+]
+`;

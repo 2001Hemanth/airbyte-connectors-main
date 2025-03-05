@@ -1,0 +1,63 @@
+{
+  "name": "github-source",
+  "version": "0.0.1",
+  "description": "Github Airbyte source",
+  "homepage": "https://www.faros.ai",
+  "keywords": [
+    "airbyte",
+    "source",
+    "faros",
+    "github"
+  ],
+  "author": "Faros AI, Inc.",
+  "license": "Apache-2.0",
+  "files": [
+    "lib/",
+    "resources/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./lib",
+  "scripts": {
+    "build": "tsc -p src",
+    "clean": "rm -rf lib node_modules out",
+    "fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts' && npm run lint -- --fix",
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+
+    "test": "jest --verbose --color",
+    "test-cov": "jest --coverage --verbose --color",
+    "watch": "tsc -b -w src test"
+  },
+  "dependencies": {
+    "@octokit/auth-app": "^6.1.1",
+    "@octokit/graphql": "^7.1.0",
+    "@octokit/plugin-paginate-graphql": "^4.0.1",
+    "@octokit/plugin-retry": "^6.0.1",
+    "@octokit/plugin-throttling": "^8.2.0",
+    "@octokit/rest": "^20.1.1",
+    "@octokit/types": "^13.5.0",
+    "faros-airbyte-cdk": "*",
+    "faros-airbyte-common": "*",
+    "faros-js-client": "^0.6.1",
+    "typescript-memoize": "^1.1.0",
+    "verror": "^1.10.1"
+  },
+  "jest": {
+    "coverageDirectory": "out/coverage",
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": [
+      "jest-extended/all"
+    ],
+    "testEnvironment": "node",
+    "testTimeout": 10000,
+    "transform": {
+      "\\.ts?$": [
+        "ts-jest",
+        {
+          "tsconfig": "test/tsconfig.json"
+        }
+      ]
+    }
+  }
+}

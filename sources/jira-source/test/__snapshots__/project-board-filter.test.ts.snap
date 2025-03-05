@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectBoardFilter getBoards (FarosGraph) - nothing included - nothing excluded 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards (FarosGraph) - nothing included - some excluded 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": false,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards (FarosGraph) - some included - nothing excluded 1`] = `
+[
+  {
+    "issueSync": false,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards (FarosGraph) - some included - some excluded 1`] = `
+[
+  {
+    "issueSync": false,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": false,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards - all boards - empty list 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards - all boards - no list 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards - all boards - project list 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards - specific boards excluded 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "1",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getBoards - specific boards included 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "2",
+  },
+  {
+    "issueSync": true,
+    "uid": "3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getProjects - all projects - empty list 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "TEST-1",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-2",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getProjects - all projects - no list 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "TEST-1",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-2",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getProjects - specific projects excluded 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "TEST-2",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-3",
+  },
+]
+`;
+
+exports[`ProjectBoardFilter getProjects - specific projects included 1`] = `
+[
+  {
+    "issueSync": true,
+    "uid": "TEST-1",
+  },
+  {
+    "issueSync": true,
+    "uid": "TEST-2",
+  },
+]
+`;

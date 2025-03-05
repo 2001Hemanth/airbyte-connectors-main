@@ -1,0 +1,1391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index check connection - invalid bucketing config - non positive integer 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "bucket_total must be a positive integer",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - invalid bucketing config - out of range 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "bucket_id must be between 1 and 2",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - missing credentials  1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Either Jira personal token or Jira username and password must be provided",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - missing url 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Please provide a Jira URL",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - missing url 2`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Please provide a Jira URL",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - missing url 3`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Please provide a Jira URL",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection - missing url 4`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "message": "Please provide a Jira URL",
+    "status": "FAILED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index check connection 1`] = `
+AirbyteConnectionStatusMessage {
+  "connectionStatus": {
+    "status": "SUCCEEDED",
+  },
+  "type": "CONNECTION_STATUS",
+}
+`;
+
+exports[`index onBeforeRead with run_mode WebhookSupplement should filter streams 1`] = `
+{
+  "streams": [
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_issue_pull_requests",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_sprint_reports",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_board_issues",
+      },
+      "sync_mode": "full_refresh",
+    },
+  ],
+}
+`;
+
+exports[`index onBeforeRead without run_mode defaults to full mode streams 1`] = `
+{
+  "streams": [
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_issue_pull_requests",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_sprint_reports",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_board_issues",
+      },
+      "sync_mode": "full_refresh",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_sprints",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_users",
+      },
+      "sync_mode": "full_refresh",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_projects",
+      },
+      "sync_mode": "full_refresh",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_issues",
+      },
+      "sync_mode": "incremental",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_boards",
+      },
+      "sync_mode": "full_refresh",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_project_versions",
+      },
+      "sync_mode": "full_refresh",
+    },
+    {
+      "stream": {
+        "json_schema": {},
+        "name": "faros_project_version_issues",
+      },
+      "sync_mode": "full_refresh",
+    },
+  ],
+}
+`;
+
+exports[`index stream - issues 1`] = `
+[
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+      [
+        "Custom Array Field_0",
+        "This",
+      ],
+      [
+        "Custom Array Field_1",
+        "Is",
+      ],
+      [
+        "Custom Array Field_2",
+        "A",
+      ],
+      [
+        "Custom Array Field_3",
+        "Test",
+      ],
+      [
+        "Custom Array Field",
+        "["This","Is","A","Test"]",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": "[object Object]",
+    "id": "12345",
+    "key": "TEST-1",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": 10,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": undefined,
+    "status": {
+      "category": "To Do",
+      "detail": "Selected for Development",
+    },
+    "statusChanged": 2024-07-04T12:41:00.089Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+      [
+        {
+          "category": "Selected for Development",
+          "detail": "Selected for Development",
+        },
+        2024-07-04T12:41:00.089Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Sub-task",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-1",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": undefined,
+    "id": "12346",
+    "key": "TEST-2",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": undefined,
+    "priority": undefined,
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": undefined,
+      "history": [],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "Backlog",
+    },
+    "statusChanged": 2024-07-04T12:40:59.251Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Story",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-2",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2021-09-16T22:42:13.869Z,
+        "uid": "88a7f7f45b7d3b7basddda",
+      },
+    ],
+    "created": 2021-09-16T22:42:13.869Z,
+    "creator": "88a7f7f45b7d3b111232",
+    "dependencies": [],
+    "description": null,
+    "epic": undefined,
+    "id": "12333",
+    "key": "TEST-3",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": undefined,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": "55",
+      "history": [
+        {
+          "addedAt": 2024-03-08T17:59:28.180Z,
+          "uid": "55",
+        },
+        {
+          "addedAt": 2024-03-08T17:59:28.180Z,
+          "removedAt": 2024-03-08T17:59:28.180Z,
+          "uid": "66",
+        },
+      ],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "To Do",
+    },
+    "statusChanged": 2024-03-08T17:52:41.851Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "QA",
+          "detail": "QA",
+        },
+        2021-09-16T22:42:13.869Z,
+      ],
+      [
+        {
+          "category": "To Do",
+          "detail": "To Do",
+        },
+        2024-03-08T17:52:41.851Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Test issue 3",
+    "type": "Story",
+    "updated": 2024-03-08T17:59:28.167Z,
+    "url": "https://jira.com/browse/TEST-3",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": undefined,
+    "id": "12333",
+    "key": "TEST-4",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": {
+      "key": "TEST-4",
+      "type": "Epic",
+    },
+    "points": undefined,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": undefined,
+      "history": [],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "Selected for Development",
+    },
+    "statusChanged": 2024-07-04T12:41:00.089Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+      [
+        {
+          "category": "Selected for Development",
+          "detail": "Selected for Development",
+        },
+        2024-07-04T12:41:00.089Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Story",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-4",
+  },
+]
+`;
+
+exports[`index stream - issues to sync additional fields 1`] = `
+[
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+      [
+        "Custom Array Field_0",
+        "This",
+      ],
+      [
+        "Custom Array Field_1",
+        "Is",
+      ],
+      [
+        "Custom Array Field_2",
+        "A",
+      ],
+      [
+        "Custom Array Field_3",
+        "Test",
+      ],
+      [
+        "Custom Array Field",
+        "["This","Is","A","Test"]",
+      ],
+    ],
+    "key": "TEST-1",
+    "updateAdditionalFields": true,
+    "updated": 2024-07-04T12:41:00.075Z,
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "key": "TEST-2",
+    "updateAdditionalFields": true,
+    "updated": 2024-07-04T12:41:00.075Z,
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "key": "TEST-3",
+    "updateAdditionalFields": true,
+    "updated": 2024-03-08T17:59:28.167Z,
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+    ],
+    "key": "TEST-4",
+    "updateAdditionalFields": true,
+    "updated": 2024-07-04T12:41:00.075Z,
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+      [
+        "Custom Array Field_0",
+        "This",
+      ],
+      [
+        "Custom Array Field_1",
+        "Is",
+      ],
+      [
+        "Custom Array Field_2",
+        "A",
+      ],
+      [
+        "Custom Array Field_3",
+        "Test",
+      ],
+      [
+        "Custom Array Field",
+        "["This","Is","A","Test"]",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": "[object Object]",
+    "id": "12345",
+    "key": "TEST-1",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": 10,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": undefined,
+    "status": {
+      "category": "To Do",
+      "detail": "Selected for Development",
+    },
+    "statusChanged": 2024-07-04T12:41:00.089Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+      [
+        {
+          "category": "Selected for Development",
+          "detail": "Selected for Development",
+        },
+        2024-07-04T12:41:00.089Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Sub-task",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-1",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": undefined,
+    "id": "12346",
+    "key": "TEST-2",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": undefined,
+    "priority": undefined,
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": undefined,
+      "history": [],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "Backlog",
+    },
+    "statusChanged": 2024-07-04T12:40:59.251Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Story",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-2",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "{}",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2021-09-16T22:42:13.869Z,
+        "uid": "88a7f7f45b7d3b7basddda",
+      },
+    ],
+    "created": 2021-09-16T22:42:13.869Z,
+    "creator": "88a7f7f45b7d3b111232",
+    "dependencies": [],
+    "description": null,
+    "epic": undefined,
+    "id": "12333",
+    "key": "TEST-3",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": undefined,
+    "points": undefined,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": "55",
+      "history": [
+        {
+          "addedAt": 2024-03-08T17:59:28.180Z,
+          "uid": "55",
+        },
+        {
+          "addedAt": 2024-03-08T17:59:28.180Z,
+          "removedAt": 2024-03-08T17:59:28.180Z,
+          "uid": "66",
+        },
+      ],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "To Do",
+    },
+    "statusChanged": 2024-03-08T17:52:41.851Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "QA",
+          "detail": "QA",
+        },
+        2021-09-16T22:42:13.869Z,
+      ],
+      [
+        {
+          "category": "To Do",
+          "detail": "To Do",
+        },
+        2024-03-08T17:52:41.851Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Test issue 3",
+    "type": "Story",
+    "updated": 2024-03-08T17:59:28.167Z,
+    "url": "https://jira.com/browse/TEST-3",
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "test",
+      ],
+    ],
+    "assignees": [
+      {
+        "assignedAt": 2024-07-04T12:40:59.251Z,
+        "uid": "1234:aaaaa-1234-1234-bbbb-123456785",
+      },
+    ],
+    "created": 2024-07-04T12:40:59.251Z,
+    "creator": "1234:aaaaa-1234-1234-bbbb-123456785",
+    "dependencies": [],
+    "description": "This is a test issue",
+    "epic": undefined,
+    "id": "12333",
+    "key": "TEST-4",
+    "keyChangelog": [],
+    "labels": [],
+    "parent": {
+      "key": "TEST-4",
+      "type": "Epic",
+    },
+    "points": undefined,
+    "priority": "Medium",
+    "project": "TEST",
+    "resolution": undefined,
+    "resolutionDate": undefined,
+    "sprintInfo": {
+      "currentSprintId": undefined,
+      "history": [],
+    },
+    "status": {
+      "category": "To Do",
+      "detail": "Selected for Development",
+    },
+    "statusChanged": 2024-07-04T12:41:00.089Z,
+    "statusChangelog": [
+      [
+        {
+          "category": "To Do",
+          "detail": "Backlog",
+        },
+        2024-07-04T12:40:59.251Z,
+      ],
+      [
+        {
+          "category": "Selected for Development",
+          "detail": "Selected for Development",
+        },
+        2024-07-04T12:41:00.089Z,
+      ],
+    ],
+    "subtasks": [],
+    "summary": "Jira test issue",
+    "type": "Story",
+    "updated": 2024-07-04T12:41:00.075Z,
+    "url": "https://jira.com/browse/TEST-4",
+  },
+]
+`;
+
+exports[`index stream with project slices using bucket 1 1`] = `
+[
+  {
+    "project": "TEST",
+  },
+  {
+    "project": "TEST3",
+  },
+]
+`;
+
+exports[`index stream with project slices using bucket 2 1`] = `
+[
+  {
+    "project": "TEST2",
+  },
+]
+`;
+
+exports[`index streams - additional fields 1`] = `
+[
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "1",
+      ],
+      [
+        "Custom String Field",
+        "Test",
+      ],
+    ],
+    "key": "TEST-1",
+    "updated": 2024-03-14T12:00:00.000Z,
+  },
+  {
+    "additionalFields": [
+      [
+        "Custom Number Field",
+        "2",
+      ],
+      [
+        "Custom String Field",
+        "Test 2",
+      ],
+    ],
+    "key": "TEST-2",
+    "updated": 2024-03-14T12:00:00.000Z,
+  },
+]
+`;
+
+exports[`index streams - board_issues using board ids 1`] = `
+[
+  {
+    "boardId": "1",
+    "key": "TEST-1",
+  },
+  {
+    "boardId": "1",
+    "key": "TEST-2",
+  },
+]
+`;
+
+exports[`index streams - boards 1`] = `
+[
+  {
+    "issueSync": false,
+    "name": "Tasks without a board in project TEST",
+    "projectKey": "TEST",
+    "type": "Custom",
+    "uid": "faros-tasks-with-no-board-TEST",
+  },
+  {
+    "id": 1,
+    "issueSync": true,
+    "name": "Board 1",
+    "projectKey": "TEST",
+    "type": "scrum",
+    "uid": "1",
+  },
+  {
+    "id": 2,
+    "issueSync": true,
+    "name": "Board 2",
+    "projectKey": "TEST",
+    "type": "scrum",
+    "uid": "2",
+  },
+  {
+    "id": 3,
+    "issueSync": true,
+    "name": "Board 3",
+    "projectKey": "TEST",
+    "type": "kanban",
+    "uid": "3",
+  },
+]
+`;
+
+exports[`index streams - boards with use_projects_as_boards enabled 1`] = `[]`;
+
+exports[`index streams - issue_pull_requests 1`] = `
+[
+  {
+    "issue": {
+      "key": "TEST-1",
+      "project": "TEST",
+      "updated": 2024-03-14T12:00:00.000Z,
+    },
+    "number": 123,
+    "repo": {
+      "name": "test-repo",
+      "org": "test-org",
+      "source": "GitHub",
+    },
+  },
+  {
+    "issue": {
+      "key": "TEST-2",
+      "project": "TEST",
+      "updated": 2024-03-14T12:00:00.000Z,
+    },
+    "number": 123,
+    "repo": {
+      "name": "test-repo",
+      "org": "test-org",
+      "source": "GitHub",
+    },
+  },
+]
+`;
+
+exports[`index streams - project version issues 1`] = `
+[
+  {
+    "key": "TEST-1",
+    "projectKey": "TEST",
+    "projectVersionId": "10000",
+  },
+  {
+    "key": "TEST-2",
+    "projectKey": "TEST",
+    "projectVersionId": "10000",
+  },
+]
+`;
+
+exports[`index streams - project versions 1`] = `
+[
+  {
+    "archived": false,
+    "description": "Third release of the project",
+    "id": "10003",
+    "name": "Version 3.0",
+    "projectId": 1,
+    "projectKey": "TEST",
+    "released": false,
+  },
+  {
+    "description": "Second release of the project",
+    "id": "10001",
+    "name": "Version 2.0",
+    "projectId": 1,
+    "projectKey": "TEST",
+    "releaseDate": "2023-06-01",
+    "startDate": "2023-04-01",
+  },
+  {
+    "archived": false,
+    "description": "Initial release of the project",
+    "id": "10000",
+    "name": "Version 1.0",
+    "overdue": false,
+    "projectId": 1,
+    "projectKey": "TEST",
+    "releaseDate": "2023-04-01",
+    "released": true,
+    "startDate": "2023-01-01",
+  },
+]
+`;
+
+exports[`index streams - projects - Cloud project list 1`] = `
+[
+  {
+    "description": "This is a test",
+    "id": "1234",
+    "issueSync": true,
+    "key": "TEST",
+    "name": "Test 1",
+  },
+  {
+    "description": "This is a test",
+    "id": "1235",
+    "issueSync": true,
+    "key": "TEST2",
+    "name": "Test 2",
+  },
+  {
+    "description": "This is a test",
+    "id": "1236",
+    "issueSync": true,
+    "key": "TEST3",
+    "name": "Test 3",
+  },
+]
+`;
+
+exports[`index streams - projects - Jira Server - project list 1`] = `
+[
+  {
+    "description": "This is a test",
+    "id": "1234",
+    "issueSync": true,
+    "key": "TEST",
+    "name": "Test 1",
+  },
+  {
+    "description": "This is a test",
+    "id": "1235",
+    "issueSync": true,
+    "key": "TEST2",
+    "name": "Test 2",
+  },
+]
+`;
+
+exports[`index streams - projects - Jira Server 1`] = `
+[
+  {
+    "description": "This is a test",
+    "id": "1234",
+    "issueSync": true,
+    "key": "TEST",
+    "name": "Test 1",
+  },
+  {
+    "description": "This is a test",
+    "id": "1235",
+    "issueSync": true,
+    "key": "TEST2",
+    "name": "Test 2",
+  },
+  {
+    "description": "This is a test",
+    "id": "1236",
+    "issueSync": true,
+    "key": "TEST3",
+    "name": "Test 3",
+  },
+]
+`;
+
+exports[`index streams - projects - pull all projects 1`] = `
+[
+  {
+    "description": "This is a test",
+    "id": "1234",
+    "issueSync": true,
+    "key": "TEST",
+    "name": "Test 1",
+  },
+  {
+    "description": "This is a test",
+    "id": "1235",
+    "issueSync": true,
+    "key": "TEST2",
+    "name": "Test 2",
+  },
+  {
+    "description": "This is a test",
+    "id": "1236",
+    "issueSync": true,
+    "key": "TEST3",
+    "name": "Test 3",
+  },
+]
+`;
+
+exports[`index streams - sprint_reports 1`] = `
+[
+  {
+    "boardId": "1",
+    "completeDate": 2024-03-14T12:00:00.000Z,
+    "issues": [
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-1",
+        "plannedPoints": 5,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-2",
+        "plannedPoints": 4,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "CompletedOutsideSprint",
+        "key": "TEST-5",
+        "plannedPoints": 15,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "NotCompleted",
+        "key": "TEST-3",
+        "plannedPoints": 15,
+        "points": 10,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "NotCompleted",
+        "key": "TEST-4",
+        "plannedPoints": 15,
+        "points": 15,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "Removed",
+        "key": "TEST-6",
+        "plannedPoints": 20,
+        "points": 20,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+    ],
+    "sprintId": 1,
+  },
+]
+`;
+
+exports[`index streams - sprint_reports with run mode WebhookSupplement using Faros client 1`] = `
+[
+  {
+    "boardId": "1",
+    "completeDate": 2024-01-01T00:00:00.000Z,
+    "issues": [
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-1",
+        "plannedPoints": 5,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-2",
+        "plannedPoints": 4,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "CompletedOutsideSprint",
+        "key": "TEST-5",
+        "plannedPoints": 15,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "NotCompleted",
+        "key": "TEST-3",
+        "plannedPoints": 15,
+        "points": 10,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "NotCompleted",
+        "key": "TEST-4",
+        "plannedPoints": 15,
+        "points": 15,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "Removed",
+        "key": "TEST-6",
+        "plannedPoints": 20,
+        "points": 20,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+    ],
+    "sprintId": 1,
+  },
+]
+`;
+
+exports[`index streams - sprint_reports with use_projects_as_boards enabled 1`] = `
+[
+  {
+    "boardId": "1",
+    "completeDate": 2024-03-14T12:00:00.000Z,
+    "issues": [
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-1",
+        "plannedPoints": 5,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "Completed",
+        "key": "TEST-2",
+        "plannedPoints": 4,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "CompletedOutsideSprint",
+        "key": "TEST-5",
+        "plannedPoints": 15,
+        "points": 5,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "NotCompleted",
+        "key": "TEST-3",
+        "plannedPoints": 15,
+        "points": 10,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": undefined,
+        "classification": "NotCompleted",
+        "key": "TEST-4",
+        "plannedPoints": 15,
+        "points": 15,
+        "status": {
+          "category": "In Progress",
+          "detail": "In Progress",
+        },
+      },
+      {
+        "addedDuringSprint": true,
+        "classification": "Removed",
+        "key": "TEST-6",
+        "plannedPoints": 20,
+        "points": 20,
+        "status": {
+          "category": "Done",
+          "detail": "Done",
+        },
+      },
+    ],
+    "projectKey": "TEST",
+    "sprintId": 1,
+  },
+]
+`;
+
+exports[`index streams - sprints 1`] = `
+[
+  {
+    "activatedDate": "2024-03-14T12:00:00Z",
+    "boardId": 1,
+    "completeDate": "2024-03-14T12:00:00Z",
+    "endDate": "2024-03-14T12:00:00Z",
+    "goal": "Finalize tasks for UI component",
+    "id": 1,
+    "name": "Test Sprint",
+    "originBoardId": 1,
+    "startDate": "2024-03-14T12:00:00Z",
+    "state": "closed",
+  },
+]
+`;
+
+exports[`index streams - sprints with use_projects_as_boards enabled 1`] = `
+[
+  {
+    "activatedDate": "2024-03-14T12:00:00Z",
+    "boardId": 1,
+    "completeDate": "2024-03-14T12:00:00Z",
+    "endDate": "2024-03-14T12:00:00Z",
+    "goal": "Finalize tasks for UI component",
+    "id": 1,
+    "name": "Test Sprint",
+    "originBoardId": 1,
+    "projectKey": "TEST",
+    "startDate": "2024-03-14T12:00:00Z",
+    "state": "closed",
+  },
+]
+`;
+
+exports[`index streams - team memberships 1`] = `
+[
+  {
+    "memberId": "12334c037692da100700011",
+    "teamId": "1234567890asas123132",
+  },
+  {
+    "memberId": "3214dfa413fc70069d12323",
+    "teamId": "1234567890asas123132",
+  },
+]
+`;
+
+exports[`index streams - teams 1`] = `
+[
+  {
+    "displayName": "Test",
+    "id": "1234567890asas123132",
+  },
+]
+`;
+
+exports[`index streams - users 1`] = `
+[
+  {
+    "accountId": "8425d037692dx1332747h4e74",
+    "active": true,
+    "displayName": "User 1",
+    "id": "8425d037692dx1332747h4e74",
+  },
+  {
+    "accountId": "8j849p1e0756990975d95k56",
+    "active": false,
+    "displayName": "User 2",
+    "id": "8j849p1e0756990975d95k56",
+  },
+]
+`;

@@ -1,0 +1,44 @@
+{
+  "title": "PagerDuty",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "title": "Configuration",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "const": "PagerDuty",
+          "order": 0
+        },
+        "application_mapping": {
+          "type": "string",
+          "title": "Application Mapping",
+          "description": "JSON map of PagerDuty service(s) name, to compute platform specific app name and platform name.",
+          "multiline": true,
+          "default": "{}",
+          "examples": [
+            "{ \"Aion\": { \"name\": \"aion\", \"platform\": \"ECS\" } }"
+          ]
+        },
+        "associate_applications_to_teams": {
+          "type": "boolean",
+          "title": "Associate Applications to Teams",
+          "description": "Associate applications to org teams based on PagerDuty team names",
+          "default": false
+        },
+        "default_severity": {
+          "type": "string",
+          "title": "Default Severity",
+          "description": "A default severity category if not present",
+          "pattern": "^(Sev[1-5])?(Custom)?$",
+          "examples": [
+            "Sev1",
+            "Sev5",
+            "Custom"
+          ]
+        }
+      }
+    }
+  ]
+}

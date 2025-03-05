@@ -1,0 +1,489 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`asana asana basic test process records from all streams 1`] = `
+Array [
+  "Processed 7 records",
+  "Processed records by stream: {\\\\\\"mytestsource__asana__projects\\\\\\":1,\\\\\\"mytestsource__asana__tags\\\\\\":2,\\\\\\"mytestsource__asana__tasks\\\\\\":3,\\\\\\"mytestsource__asana__users\\\\\\":1}\\"},\\"type\\":\\"LOG\\"}",
+  "Would write 11 records",
+  "Would write records by model: {\\\\\\"tms_Label\\\\\\":2,\\\\\\"tms_Project\\\\\\":1,\\\\\\"tms_Task\\\\\\":3,\\\\\\"tms_TaskBoard\\\\\\":1,\\\\\\"tms_TaskBoardProjectRelationship\\\\\\":1,\\\\\\"tms_TaskTag\\\\\\":2,\\\\\\"tms_User\\\\\\":1}\\"},\\"type\\":\\"LOG\\"}",
+  "Skipped 0 records",
+  "Errored 0 records",
+]
+`;
+
+exports[`asana project tasks basic project task 1`] = `
+Array [
+  Object {
+    "model": "tms_TaskBoardRelationship",
+    "record": Object {
+      "board": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+  Object {
+    "model": "tms_TaskProjectRelationship",
+    "record": Object {
+      "project": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+]
+`;
+
+exports[`asana projects basic project 1`] = `
+Array [
+  Object {
+    "model": "tms_TaskBoard",
+    "record": Object {
+      "name": "Project Uno",
+      "source": "Asana",
+      "uid": "1205346703408259",
+    },
+  },
+  Object {
+    "model": "tms_Project",
+    "record": Object {
+      "name": "Project Uno",
+      "source": "Asana",
+      "uid": "1205346703408259",
+    },
+  },
+  Object {
+    "model": "tms_TaskBoardProjectRelationship",
+    "record": Object {
+      "board": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "project": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+    },
+  },
+]
+`;
+
+exports[`asana tags basic tag 1`] = `
+Array [
+  Object {
+    "model": "tms_Label",
+    "record": Object {
+      "name": "SampleTag",
+    },
+  },
+]
+`;
+
+exports[`asana tasks assignee 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+  Object {
+    "model": "tms_TaskAssignment",
+    "record": Object {
+      "assignee": Object {
+        "source": "Asana",
+        "uid": "7440298482110",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+]
+`;
+
+exports[`asana tasks basic task 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+]
+`;
+
+exports[`asana tasks completed task converts to status Done 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T20:59:25.481Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Done",
+        "detail": "completed",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+]
+`;
+
+exports[`asana tasks memberships 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [
+        Object {
+          "name": "section_gid",
+          "value": "1205346703408260",
+        },
+        Object {
+          "name": "section_name",
+          "value": "Section 1",
+        },
+      ],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+]
+`;
+
+exports[`asana tasks parent 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": Object {
+        "source": "Asana",
+        "uid": "1205346703408261",
+      },
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+  Object {
+    "model": "tms_TaskDependency",
+    "record": Object {
+      "blocking": false,
+      "dependentTask": Object {
+        "source": "Asana",
+        "uid": "1205346703408261",
+      },
+      "fulfillingTask": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+]
+`;
+
+exports[`asana tasks tags 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+  Object {
+    "model": "tms_TaskTag",
+    "record": Object {
+      "label": Object {
+        "name": "tag1",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+  Object {
+    "model": "tms_TaskTag",
+    "record": Object {
+      "label": Object {
+        "name": "tag2",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+]
+`;
+
+exports[`asana tasks task with stories writes statusChangelog 1`] = `
+Array [
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [
+        Object {
+          "changedAt": "2023-08-24T15:52:00.014Z",
+          "status": Object {
+            "category": "Done",
+            "detail": "marked_complete",
+          },
+        },
+        Object {
+          "changedAt": "2023-08-24T15:55:00.014Z",
+          "status": Object {
+            "category": "Todo",
+            "detail": "marked_incomplete",
+          },
+        },
+      ],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+]
+`;
+
+exports[`asana tasks tasks_full should process project membership 1`] = `
+Array [
+  Object {
+    "model": "tms_TaskBoard",
+    "record": Object {
+      "name": "Project 1",
+      "source": "Asana",
+      "uid": "1205346703408259",
+    },
+  },
+  Object {
+    "model": "tms_Project",
+    "record": Object {
+      "name": "Project 1",
+      "source": "Asana",
+      "uid": "1205346703408259",
+    },
+  },
+  Object {
+    "model": "tms_TaskBoardProjectRelationship",
+    "record": Object {
+      "board": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "project": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+    },
+  },
+  Object {
+    "model": "tms_TaskBoardRelationship",
+    "record": Object {
+      "board": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+  Object {
+    "model": "tms_TaskProjectRelationship",
+    "record": Object {
+      "project": Object {
+        "source": "Asana",
+        "uid": "1205346703408259",
+      },
+      "task": Object {
+        "source": "Asana",
+        "uid": "1205346703408262",
+      },
+    },
+  },
+  Object {
+    "model": "tms_Task",
+    "record": Object {
+      "additionalFields": Array [],
+      "createdAt": 2023-08-24T15:52:00.014Z,
+      "description": "Task 1 notes",
+      "name": "Task 1",
+      "parent": null,
+      "resolvedAt": 2023-08-25T15:52:00.014Z,
+      "source": "Asana",
+      "status": Object {
+        "category": "Todo",
+        "detail": "incomplete",
+      },
+      "statusChangedAt": 2023-08-25T20:59:25.575Z,
+      "statusChangelog": Array [],
+      "type": Object {
+        "category": "Task",
+        "detail": "task",
+      },
+      "uid": "1205346703408262",
+      "updatedAt": 2023-08-25T20:59:25.575Z,
+      "url": "https://app.asana.com/0/1205346703408259/1205346703408262",
+    },
+  },
+]
+`;
+
+exports[`asana users basic user 1`] = `
+Array [
+  Object {
+    "model": "tms_User",
+    "record": Object {
+      "emailAddress": null,
+      "name": "John Doe",
+      "source": "Asana",
+      "uid": "user-123",
+    },
+  },
+]
+`;
+
+exports[`asana users user with email 1`] = `
+Array [
+  Object {
+    "model": "tms_User",
+    "record": Object {
+      "emailAddress": "johndoe@example.com",
+      "name": "John Doe",
+      "source": "Asana",
+      "uid": "user-123",
+    },
+  },
+]
+`;

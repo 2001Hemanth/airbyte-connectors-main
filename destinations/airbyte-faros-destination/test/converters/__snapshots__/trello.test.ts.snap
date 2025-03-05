@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`trello basic test process records from all streams 1`] = `
+Array [
+  "Processed 2 records",
+  "Processed records by stream: {\\\\\\"mytestsource__trello__boards\\\\\\":1,\\\\\\"mytestsource__trello__users\\\\\\":1}\\"},\\"type\\":\\"LOG\\"}",
+  "Would write 4 records",
+  "Would write records by model: {\\\\\\"tms_Project\\\\\\":1,\\\\\\"tms_TaskBoard\\\\\\":1,\\\\\\"tms_TaskBoardProjectRelationship\\\\\\":1,\\\\\\"tms_User\\\\\\":1}\\"},\\"type\\":\\"LOG\\"}",
+  "Skipped 0 records",
+  "Errored 0 records",
+]
+`;
+
+exports[`trello boards basic board 1`] = `
+Array [
+  Object {
+    "model": "tms_TaskBoard",
+    "record": Object {
+      "name": "Innovative Venture",
+      "source": "Trello",
+      "uid": "b98e01d14cf778006ae8e8d1",
+    },
+  },
+  Object {
+    "model": "tms_Project",
+    "record": Object {
+      "name": "Innovative Venture",
+      "source": "Trello",
+      "uid": "b98e01d14cf778006ae8e8d1",
+    },
+  },
+  Object {
+    "model": "tms_TaskBoardProjectRelationship",
+    "record": Object {
+      "board": Object {
+        "source": "Trello",
+        "uid": "b98e01d14cf778006ae8e8d1",
+      },
+      "project": Object {
+        "source": "Trello",
+        "uid": "b98e01d14cf778006ae8e8d1",
+      },
+    },
+  },
+]
+`;
+
+exports[`trello users basic user 1`] = `
+Array [
+  Object {
+    "model": "tms_User",
+    "record": Object {
+      "emailAddress": "jwilliams80",
+      "name": "Jamie Williams",
+      "source": "Trello",
+      "uid": "1735be8ade395c72d43d6603",
+    },
+  },
+]
+`;

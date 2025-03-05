@@ -1,0 +1,56 @@
+{
+  "name": "faros-graphql-source",
+  "version": "0.0.1",
+  "description": "Faros GraphQL Airbyte source",
+  "keywords": [
+    "airbyte",
+    "graphql",
+    "faros"
+  ],
+  "homepage": "https://www.faros.ai",
+  "author": "Faros AI, Inc.",
+  "license": "Apache-2.0",
+  "files": [
+    "lib/",
+    "resources/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./lib",
+  "scripts": {
+    "build": "tsc -p src",
+    "clean": "rm -rf lib node_modules out",
+    "fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts' && npm run lint -- --fix",
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+
+    "test": "jest --verbose --color",
+    "test-cov": "jest --coverage --verbose --color",
+    "watch": "tsc -b -w src test"
+  },
+  "dependencies": {
+    "avsc": "5.7.7",
+    "faros-airbyte-cdk": "*",
+    "faros-airbyte-common": "*",
+    "faros-js-client": "^0.6.1",
+    "graphql": "^16.8.1",
+    "verror": "^1.10.1"
+  },
+  "jest": {
+    "coverageDirectory": "out/coverage",
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testTimeout": 10000,
+    "transform": {
+      "\\.ts?$": [
+        "ts-jest",
+        {
+          "tsconfig": "test/tsconfig.json"
+        }
+      ]
+    },
+    "snapshotFormat": {
+      "printBasicPrototype": true
+    }
+  }
+}

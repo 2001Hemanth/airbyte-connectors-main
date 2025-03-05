@@ -1,0 +1,41 @@
+{
+  "title": "BambooHR",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "title": "Configuration",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "const": "BambooHR",
+          "order": 0
+        },
+        "bootstrap_teams_from_managers": {
+          "type": "boolean",
+          "title": "Bootstrap Teams From Managers",
+          "description": "Assign employees to teams based off their managers.",
+          "default": false
+        },
+        "inactive_employment_history_status": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Inactive employmentHistoryStatus",
+          "description": "Values of employmentHistoryStatus that are equivalent to an employee being inactive",
+          "example": [
+            "Terminated",
+            "On-Leave"
+          ]
+        },
+        "resolve_locations": {
+          "type": "boolean",
+          "title": "Resolve Locations",
+          "description": "Resolve locations using the location field.",
+          "default": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils add source common properties 1`] = `
+AirbyteSpec {
+  "spec": Object {
+    "connectionSpecification": Object {
+      "properties": Object {
+        "debug": Object {
+          "default": false,
+          "description": "Enable debug mode",
+          "order": 1000,
+          "title": "Debug",
+          "type": "boolean",
+        },
+        "faros_source_id": Object {
+          "description": "The ID of the source (aka account)",
+          "order": 1001,
+          "title": "The source ID",
+          "type": "string",
+        },
+        "prop1": Object {
+          "type": "string",
+        },
+      },
+    },
+  },
+  "type": "SPEC",
+}
+`;

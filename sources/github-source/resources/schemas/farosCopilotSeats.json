@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "org": {
+      "type": "string"
+    },
+    "empty": {
+      "type": "boolean"
+    },
+    "user": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    },
+    "teamJoinedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "teamLeftAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "endedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "pending_cancellation_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "last_activity_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

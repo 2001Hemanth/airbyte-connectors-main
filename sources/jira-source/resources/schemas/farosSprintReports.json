@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "sprintId": {
+      "type": "number"
+    },
+    "boardId": {
+      "type": "string"
+    },
+    "completeDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "issues": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "points": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              },
+              "addedDuringSprint": {
+                "type": "boolean"
+              }
+            }
+        }
+    }
+  }
+}

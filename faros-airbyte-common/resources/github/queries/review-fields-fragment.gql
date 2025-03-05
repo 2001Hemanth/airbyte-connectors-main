@@ -1,0 +1,33 @@
+fragment reviewFields on PullRequestReview {
+  author {
+    login
+    type: __typename
+    ... on Bot {
+      html_url: url
+    }
+    ... on EnterpriseUserAccount {
+      name
+      html_url: url
+    }
+    ... on Mannequin {
+      html_url: url
+    }
+    ... on Organization {
+      name
+      html_url: url
+    }
+    ... on User {
+      name
+      html_url: url
+    }
+  }
+  state
+  submittedAt
+  updatedAt
+  databaseId
+  url
+  body
+  comments {
+    totalCount
+  }
+}

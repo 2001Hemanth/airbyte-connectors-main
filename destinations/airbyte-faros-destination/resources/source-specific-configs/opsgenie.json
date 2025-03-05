@@ -1,0 +1,33 @@
+{
+  "title": "OpsGenie",
+  "type": "object",
+  "oneOf": [
+    {
+      "type": "object",
+      "title": "Configuration",
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "const": "OpsGenie",
+          "order": 0
+        },
+        "max_description_length": {
+          "type": "integer",
+          "title": "Max Description Length",
+          "description": "Defines the maximum length for descriptions before truncation",
+          "default": 1000
+        },
+        "application_mapping": {
+          "type": "string",
+          "title": "Application Mapping",
+          "description": "JSON map of OpsGenie service(s) name, to compute a Faros Application and Platform name. If specified, and such service exists, the feed will write a compute_Application object.",
+          "multiline": true,
+          "default": "{}",
+          "examples": [
+            "{ \"Aion\": { \"name\": \"aion\", \"platform\": \"ECS\" } }"
+          ]
+        }
+      }
+    }
+  ]
+}

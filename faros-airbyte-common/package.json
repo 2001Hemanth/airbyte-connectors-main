@@ -1,0 +1,129 @@
+{
+  "name": "faros-airbyte-common",
+  "version": "0.0.1",
+  "description": "Faros Airbyte Connector shared utilities",
+  "keywords": [
+    "airbyte",
+    "faros"
+  ],
+  "homepage": "https://www.faros.ai",
+  "author": "Faros AI, Inc.",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/faros-ai/airbyte-connectors",
+  "bugs": {
+    "url": "https://github.com/faros-ai/airbyte-connectors/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib/",
+    "resources/"
+  ],
+  "main": "./lib",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    "./azurepipeline": "./lib/azurepipeline/index.js",
+    "./bitbucket": "./lib/bitbucket/index.js",
+    "./bitbucket-server": "./lib/bitbucket-server/index.js",
+    "./circleci": "./lib/circleci/index.js",
+    "./clickup": "./lib/clickup/index.js",
+    "./common": "./lib/common/index.js",
+    "./github": "./lib/github/index.js",
+    "./github/generated": "./lib/github/generated/index.js",
+    "./github/queries": "./lib/github/queries.js",
+    "./jira": "./lib/jira/index.js",
+    "./vanta": "./lib/vanta/index.js",
+    "./wolken": "./lib/wolken/index.js",
+    "./xray": "./lib/xray/index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "azurepipeline": [
+        "./lib/azurepipeline/index.d.ts"
+      ],
+      "bitbucket": [
+        "./lib/bitbucket/index.d.ts"
+      ],
+      "bitbucket-server": [
+        "./lib/bitbucket-server/index.d.ts"
+      ],
+      "circleci": [
+        "./lib/circleci/index.d.ts"
+      ],
+      "clickup": [
+        "./lib/clickup/index.d.ts"
+      ],
+      "common": [
+        "./lib/common/index.d.ts"
+      ],
+      "github": [
+        "./lib/github/index.d.ts"
+      ],
+      "github/generated": [
+        "./lib/github/generated/index.d.ts"
+      ],
+      "github/queries": [
+        "./lib/github/queries.d.ts"
+      ],
+      "jira": [
+        "./lib/jira/index.d.ts"
+      ],
+      "vanta": [
+          "./lib/vanta/index.d.ts"
+      ],
+      "wolken": [
+        "./lib/wolken/index.d.ts"
+      ],
+      "xray": [
+        "./lib/xray/index.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsc -p src",
+    "clean": "rm -rf lib node_modules out",
+    "fix": "prettier --write 'src/**/*.ts' 'test/**/*.ts' && npm run lint -- --fix",
+    "lint": "eslint 'src/**/*.ts' 'test/**/*.ts'",
+    "prepare": "npm run build",
+    "test": "jest --verbose --color",
+    "test-cov": "jest --coverage --verbose --color",
+    "watch": "tsc -b -w src test",
+    "codegen:github": "graphql-codegen --config src/github/codegen.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.1.1",
+    "faros-js-client": "^0.6.1",
+    "jira.js": "^4.0.0",
+    "luxon": "^3.4.4"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.9",
+    "@graphql-codegen/typescript-operations": "^4.2.3"
+  },
+  "jest": {
+    "coverageDirectory": "out/coverage",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/test/"
+    ],
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testTimeout": 10000,
+    "transform": {
+      "\\.ts?$": [
+        "ts-jest",
+        {
+          "tsconfig": "test/tsconfig.json"
+        }
+      ]
+    },
+    "snapshotFormat": {
+      "printBasicPrototype": true
+    }
+  }
+}

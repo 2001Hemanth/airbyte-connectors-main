@@ -1,0 +1,30 @@
+query ProjectBoards(
+  $source: String!
+  $pageSize: Int
+  $offset: Int,
+  $projects: [String!]
+) {
+  tms_Project(
+    where: {
+      source: { _eq: $source }
+      uid: { _in: $projects }
+    },
+    limit: $pageSize,
+    offset: $offset
+  ) {
+    uid
+    boards(
+      where: {
+        board: {
+          uid: {
+            _regex: "^[0-9]+$"  # Get only boards that came from Jira (numeric) and filter virtual for board-less tasks
+          }
+        }
+      }
+    ) {
+      board {
+        uid
+      }
+    }
+  }
+}

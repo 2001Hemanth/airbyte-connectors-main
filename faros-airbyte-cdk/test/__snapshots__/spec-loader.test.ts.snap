@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spec loader resolves references 1`] = `
+AirbyteSpec {
+  "spec": Object {
+    "connectionSpecification": Object {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "additionalProperties": true,
+      "properties": Object {
+        "prop1": Object {
+          "properties": Object {
+            "name": Object {
+              "const": "John Doe",
+              "type": "string",
+            },
+            "object_token_array": Object {
+              "items": Object {
+                "properties": Object {
+                  "token": Object {
+                    "airbyte_secret": true,
+                    "type": "string",
+                  },
+                },
+                "type": "object",
+              },
+              "type": "array",
+            },
+            "token": Object {
+              "airbyte_secret": true,
+              "type": "string",
+            },
+            "token_array": Object {
+              "items": Object {
+                "airbyte_secret": true,
+                "type": "string",
+              },
+              "type": "array",
+            },
+          },
+          "type": "object",
+        },
+      },
+      "type": "object",
+    },
+    "documentationUrl": "https://docs.faros.ai",
+  },
+  "type": "SPEC",
+}
+`;

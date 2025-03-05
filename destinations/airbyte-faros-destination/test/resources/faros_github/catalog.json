@@ -1,0 +1,184 @@
+{
+  "streams": [
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_copilot_seats"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_copilot_usage"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_organizations"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_repositories"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_pull_requests"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_commits"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_labels"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_pull_request_comments"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_users"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_teams"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_team_memberships"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_outside_collaborators"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_saml_sso_users"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_tags"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_releases"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_projects"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_issues"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_issue_comments"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_code_scanning_alerts"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_dependabot_alerts"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_secret_scanning_alerts"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_workflows"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_workflow_runs"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_workflow_jobs"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_artifacts"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_enterprises"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_enterprise_copilot_seats"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_enterprise_copilot_usage"
+      },
+      "destination_sync_mode": "append"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_enterprise_teams"
+      },
+      "destination_sync_mode": "overwrite"
+    },
+    {
+      "stream": {
+        "name": "mytestsource__github__faros_enterprise_team_memberships"
+      },
+      "destination_sync_mode": "overwrite"
+    }
+  ]
+}

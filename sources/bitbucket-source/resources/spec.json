@@ -1,0 +1,187 @@
+{
+  "documentationUrl": "https://docs.faros.ai",
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Bitbucket Spec",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+      "api_url": {
+        "order": 1,
+        "type": "string",
+        "title": "API URL",
+        "description": "The API URL for fetching data from Bitbucket",
+        "examples": [
+          "https://api.bitbucket.org/2.0"
+        ],
+        "default": "https://api.bitbucket.org/2.0"
+      },
+      "username": {
+        "order": 2,
+        "type": "string",
+        "title": "Bitbucket Username",
+        "description": "Bitbucket username. Either username/password or Access Token must be provided."
+      },
+      "password": {
+        "order": 3,
+        "type": "string",
+        "title": "Bitbucket Password",
+        "description": "Bitbucket password",
+        "airbyte_secret": true
+      },
+      "token": {
+        "order": 4,
+        "type": "string",
+        "title": "Bitbucket Access Token",
+        "description": "Personal Access Token for Bitbucket API authentication. See https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html for information on how to generate this token.",
+        "airbyte_secret": true
+      },
+      "workspaces": {
+        "order": 5,
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Workspaces",
+        "description": "List of Workspaces from which to fetch data. If none passed, all visible workspaces for the authenticated user will be used.",
+        "examples": [
+          "blaze-lib"
+        ]
+      },
+      "excluded_workspaces": {
+        "order": 6,
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Excluded Workspaces",
+        "description": "List of Workspaces from which data won't be fetched. By default, no workspaces are excluded. If workspaces list is specified, this list will be ignored.",
+        "examples": [
+          "blaze-lib"
+        ]
+      },
+      "repositories": {
+        "order": 7,
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Repositories",
+        "description": "List of Bitbucket repositories in the format 'workspace/repo-slug'. If none are provided, data from all repositories for the specified workspaces will be pulled.",
+        "examples": [
+          "blaze-lib/blaze"
+        ]
+      },
+      "excluded_repositories": {
+        "order": 8,
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Excluded Repositories",
+        "description": "List of Repositories from which data won't be fetched. By default, no repositories are excluded. If repositories list is specified, this list will be ignored.",
+        "examples": [
+          "blaze-lib/blaze"
+        ]
+      },
+      "cutoff_days": {
+        "order": 9,
+        "type": "integer",
+        "title": "Cutoff Days",
+        "default": 90,
+        "description": "Only fetch data updated after cutoff"
+      },
+      "run_mode": {
+        "order": 10,
+        "title": "Run Mode",
+        "description": "Run mode for selecting the usage of the connector",
+        "type": "string",
+        "default": "Full",
+        "enum": [
+          "Minimum",
+          "Full",
+          "Custom"
+        ]
+      },
+      "custom_streams": {
+        "order": 11,
+        "title": "Custom Streams",
+        "description": "List of streams to run when selected Run Mode is Custom (if empty, all available streams will run)",
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "examples": [
+          "workspaces",
+          "repositories"
+        ]
+      },
+      "page_size": {
+        "order": 12,
+        "type": "integer",
+        "title": "Page Size",
+        "description": "Page size to use when requesting records from Bitbucket API",
+        "default": 100
+      },
+      "backfill": {
+        "order": 13,
+        "type": "boolean",
+        "title": "Backfill",
+        "description": "Backfill data from the start date to the end date."
+      },
+      "start_date": {
+        "order": 14,
+        "type": "string",
+        "title": "Start Date",
+        "description": "The date from which to start syncing data."
+      },
+      "end_date": {
+        "order": 15,
+        "type": "string",
+        "title": "End Date",
+        "description": "The date at which to stop syncing data."
+      },
+      "bucket_id": {
+        "order": 16,
+        "type": "integer",
+        "title": "Bucket Number",
+        "description": "Bucket number for this source to determine which portion of workspaces and repositories to pull. Use it when distributing the load between multiple sources.",
+        "default": 1
+      },
+      "bucket_total": {
+        "order": 17,
+        "type": "integer",
+        "title": "Total Number of Buckets",
+        "description": "Total number of buckets to distribute workspaces and repositories across. Use it when distributing the load between multiple sources",
+        "default": 1
+      },
+      "round_robin_bucket_execution": {
+        "order": 18,
+        "type": "boolean",
+        "title": "Round Robin Bucket Execution",
+        "description": "When enabled, syncs rotate through all buckets, processing one bucket per sync. When disabled, only the bucket specified by 'bucket_id' is synced.",
+        "default": false
+      },
+      "bucket_ranges": {
+        "order": 19,
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "title": "Bucket Ranges",
+        "description": "List of bucket ranges to process when round robin bucket execution is enabled. Each element can be either a single bucket number (e.g., '7') or a range of buckets (e.g., '3-5'). All bucket numbers must be between 1 and 'bucket_total'.",
+        "examples": [
+          "3-5",
+          "7"
+        ]
+      },
+      "concurrency_limit": {
+        "order": 20,
+        "type": "integer",
+        "title": "Concurrency limit",
+        "description": "Maximum concurrency to run with",
+        "default": 5
+      }
+    }
+  }
+}

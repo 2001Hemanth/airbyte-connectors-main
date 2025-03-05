@@ -1,0 +1,154 @@
+{
+  "contents": {
+    "completedIssuesInitialEstimateSum": {"value": 10},
+    "completedIssuesEstimateSum": {"value": 10},
+    "issuesNotCompletedInitialEstimateSum": {"value": 15},
+    "issuesNotCompletedEstimateSum": {"value": 15},
+    "puntedIssuesEstimateSum": {"value": 20},
+    "issuesCompletedInAnotherSprintEstimateSum": {"value": 5},
+    "plannedPoints": 25,
+    "completedIssues": [
+      {
+        "key": "TEST-1",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 5
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 5
+          }
+        },
+        "status": {
+          "id": "10002",
+          "name": "Done",
+          "description": "",
+          "iconUrl": "https://jira.atlassian.net/",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        }
+      },
+      {
+        "key": "TEST-2",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 5
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 4
+          }
+        },
+        "status": {
+          "id": "10002",
+          "name": "Done",
+          "description": "",
+          "iconUrl": "https://jira.atlassian.net/",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        }
+      }
+    ],
+    "issuesNotCompletedInCurrentSprint": [
+      {
+        "key": "TEST-3",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 10
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 15
+          }
+        },
+        "status": {
+          "id": "10004",
+          "name": "In Progress",
+          "description": "",
+          "iconUrl": "https://jira.atlassian.net/",
+          "statusCategory": {
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        }
+      },
+      {
+        "key": "TEST-4",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 15
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 15
+          }
+        },
+        "status": {
+          "id": "10004",
+          "name": "In Progress",
+          "description": "",
+          "iconUrl": "https://jira.atlassian.net/",
+          "statusCategory": {
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow"
+          }
+        }
+      }
+    ],
+    "issuesCompletedInAnotherSprint": [
+      {
+        "key": "TEST-5",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 5
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 15
+          }
+        },
+        "status": {
+          "id": "10002",
+          "name": "Done",
+          "description": "",
+          "iconUrl": "https://jira.atlassian.net/",
+          "statusCategory": {
+            "id": "3",
+            "key": "done",
+            "colorName": "green"
+          }
+        }
+      }
+    ],
+    "puntedIssues": [
+      {
+        "key": "TEST-6",
+        "currentEstimateStatistic": {
+          "statFieldValue": {
+            "value": 20
+          }
+        },
+        "estimateStatistic": {
+          "statFieldValue": {
+            "value": 20
+          }
+        },
+        "statusId": "10002"
+      }
+    ],
+    "issueKeysAddedDuringSprint": {"TEST-3": true, "TEST-6": true}
+  }
+}
